@@ -1,0 +1,52 @@
+.self-help-toolbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $card-background-color;
+  box-shadow: $box-shadow-default;
+  border-radius: $border-radius-default;
+  padding: 1rem;
+  margin: .5rem 0;
+}
+
+.self-help-card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $card-background-color;
+  box-shadow: $box-shadow-default;
+  border-radius: $border-radius-default;
+  padding: 1rem;
+  margin: .35rem 0;
+
+  .self-help-card__content {
+    .self-help-card__name, .self-help-card__location {
+      padding: 0; margin: 0;
+    }
+
+    .self-help-card__location {
+      padding: .5rem 0 0 0;
+      color: $primary-color;
+      font-weight: normal;
+    }
+
+    .self-help-card__actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem .25rem .5rem 0;
+
+      .fi {
+        font-size: 1.4rem;
+        padding: 0 .2rem;
+      }
+
+      .fi.favorite {
+        color: crimson;
+      }
+    }
+  }
+
+
+}

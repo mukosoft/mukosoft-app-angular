@@ -29,7 +29,8 @@
             "styles": [
               "src/styles.css",
               "src/styles/style.scss",
-              "src/assets/icons/uicons-regular-rounded/css/uicons-regular-rounded.css"
+              "src/assets/icons/uicons-regular-rounded/css/uicons-regular-rounded.css",
+              "src/assets/icons/uicons-regular-solid/css/uicons-solid-rounded.css"
             ],
             "scripts": []
           },

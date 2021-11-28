@@ -1,2 +1,26 @@
-<h1>Selbsthilfegruppen</h1>
-{{groups | json}}
+<h2>Selbsthilfegruppen</h2>
+<div class="self-help-toolbar__container">
+    <div class="self-help-toolbar__action">
+        <span class="fi fi-rr-search"></span>
+    </div>
+    <div class="self-help-toolbar__action">
+        <span class="fr fi-rr-location-alt"></span>
+    </div>
+</div>
+<div class="self-help-card__container" *ngFor="let group of groups">
+    <img *ngIf="group.icon" class="self-help-card__icon" src="{{group.icon}}" alt="logo der {{group.company}}"/>
+    <div class="self-help-card__content">
+        <h4 class="self-help-card__name">{{group.company}}</h4>
+        <h4 *ngIf="group.city ||group.state" class="self-help-card__location">{{group.city}}, {{group.state}}</h4>
+        <div class="self-help-card__actions">
+            <div class="self-help-card__actions-start">
+                <span *ngIf="!isGroupFavorite(group.id)" class="fi fi-rr-heart" (click)="this.addGroupToFavorite(group.id)"></span>
+                <span *ngIf="isGroupFavorite(group.id)" class="fi fi-sr-heart favorite" (click)="this.deleteGroupFromFavorite(group.id)"></span>
+                <span class="fi fi-rr-comment"></span>
+            </div>
+            <div class="self-help-card__actions-end">
+                <span class="fi fi-rr-angle-small-right"></span>
+            </div>
+        </div>
+    </div>
+</div>
