@@ -27,8 +27,6 @@ export class SelfHelpComponent implements OnInit {
         groups.forEach(id =>
             this.httpClient.get<MyDocResponse>(`https://my-doc.net/?module=mydoc&sektion=show_doctor&uuid=${id}&return=json`)
             .subscribe(response  => {
-                console.log(response)
-
                 const data: Doctor = response.data;
                 this.groups = [...this.groups, data];
             })
