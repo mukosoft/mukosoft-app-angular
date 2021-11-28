@@ -22,7 +22,13 @@ export class SelfHelpComponent implements OnInit {
 
     getSelfHelpData() {
         // TODO: My-Doc API should return a list of selbsthilfegruppen for mukoviszidose
-        const groups = ["b22c3ba0-99e1-11eb-9c65-64652e69642d", "ca718dfc-c509-11eb-b6b9-64652e69642d"];
+        const groups = [
+            "b22c3ba0-99e1-11eb-9c65-64652e69642d",
+            "b22c3ba0-99e1-11eb-9c65-64652e69642d",
+            "ca718dfc-c509-11eb-b6b9-64652e69642d",
+            "ca718dfc-c509-11eb-b6b9-64652e69642d",
+            "ca718dfc-c509-11eb-b6b9-64652e69642d"
+        ];
 
         groups.forEach(id =>
             this.httpClient.get<MyDocResponse>(`https://my-doc.net/?module=mydoc&sektion=show_doctor&uuid=${id}&return=json`)
@@ -43,5 +49,15 @@ export class SelfHelpComponent implements OnInit {
 
     isGroupFavorite(groupId: number) {
         return this.selfHelpService.isGroupFavorite(groupId);
+    }
+
+    renderLocation(group: Doctor): string {
+        let locationString = "";
+
+        if (group.city) locationString += group.city;
+        if (group.state && group.city) locationString += ", ";
+        if (group.state) locationString += group.state;
+
+        return locationString;
     }
 }

@@ -11,7 +11,7 @@
     <img *ngIf="group.icon" class="self-help-card__icon" src="{{group.icon}}" alt="logo der {{group.company}}"/>
     <div class="self-help-card__content">
         <h4 class="self-help-card__name">{{group.company}}</h4>
-        <h4 *ngIf="group.city ||group.state" class="self-help-card__location">{{group.city}}, {{group.state}}</h4>
+        <h4 *ngIf="group.city ||group.state" class="self-help-card__location">{{renderLocation(group)}}</h4>
         <div class="self-help-card__actions">
             <div class="self-help-card__actions-start">
                 <span *ngIf="!isGroupFavorite(group.id)" class="fi fi-rr-heart" (click)="this.addGroupToFavorite(group.id)"></span>

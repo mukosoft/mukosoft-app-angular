@@ -1,11 +1,18 @@
+$animationTime: 300ms;
+
 .menu-bar__container {
     background: $nav-bar-background-color;
     display: flex;
+    position: fixed;
+    bottom: .5rem;
+    left: .5rem;
+    width: calc(100% - 1rem);
     flex-direction: row;
     justify-content: space-around;
     padding: 1.5rem 0;
-    box-shadow: $box-shadow-default;
+    box-shadow: $box-shadow-navigation-bar;
     border-radius: $border-radius-default;
+    z-index: 999;
 
     .menu-bar__items {
         display: flex;
@@ -27,12 +34,15 @@
     .menu-bar__items.selected {
         color: $nav-bar-icon__selected-color;
         font-weight: bold;
+        animation: itemSelected $animationTime ease-in-out;
 
         .fi {
             color: $nav-bar-icon__selected-color;
         }
 
         &::before {
+            animation: dotAnimation $animationTime ease-in-out forwards;
+            animation-delay: $animationTime;
             border-radius: 100%;
             position: absolute;
             background: $nav-bar-icon__selected-color;
@@ -40,6 +50,26 @@
             height: 5px;
             width: 5px;
             content: '';
+            opacity: 0;
         }
+    }
+}
+
+@keyframes dotAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes itemSelected {
+    33.333% {
+        transform: rotateZ(8deg);
+    }
+
+    66.666% {
+        transform: rotateZ(-8deg);
     }
 }
