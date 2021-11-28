@@ -1,8 +1,9 @@
-<app-app-bar [leftIconClass]="'fi fi-rr-user'" [leftIconLink]="'profil'"
+<app-app-bar [leftIconLink]="'profil'"
+             [profileImage]="profileService.getProfileImage()"
              [rightIconClass]="'fi fi-rr-settings-sliders'" [rightIconLink]="'einstellungen'"></app-app-bar>
 <div class="home-greeting__container">
     <h2 class="home-greeting__hello">Hallo,</h2>
-    <h2 class="home-greeting__name">Dominique</h2>
+    <h2 class="home-greeting__name">{{name}}</h2>
 </div>
 <app-card [header]="'Es gibt Neuigkeiten!'"></app-card>
 <h3>Was zum Kochen benötigt</h3>

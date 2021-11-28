@@ -1,4 +1,9 @@
 <div class="app-bar">
+    <div class="app-bar__image">
+        <a [routerLink]="leftIconLink">
+            <img src="{{this.getProfileImage()}}" alt="profilbild"/>
+        </a>
+    </div>
     <div *ngIf="leftIconClass" class="app-bar__icon">
         <a [routerLink]="leftIconLink">
             <span class="{{leftIconClass}}"></span>

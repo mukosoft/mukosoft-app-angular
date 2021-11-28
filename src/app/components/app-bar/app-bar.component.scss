@@ -3,6 +3,17 @@
   justify-content: space-between;
   align-items: center;
 
+  .app-bar__image {
+    img {
+      display: flex;
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: $border-radius-full;
+      box-shadow: $box-shadow-default;
+    }
+  }
+
   .app-bar__icon {
     display: flex;
     justify-content: center;

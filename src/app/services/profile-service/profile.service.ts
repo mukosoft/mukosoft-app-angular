@@ -30,4 +30,12 @@ export class ProfileService {
   getProfileImage(): string {
     return localStorage.getItem(PROFILE.PROFILE_IMG) || PROFILE.PROFILE_IMG;
   }
+
+  setProfileImage(value: string) {
+    localStorage.setItem(PROFILE.PROFILE_IMG, value);
+  }
+
+  static getDefaultProfileImage() {
+    return "./../assets/images/profile-default.png";
+  }
 }

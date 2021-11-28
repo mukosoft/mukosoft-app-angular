@@ -13,6 +13,7 @@ import { CookbookComponent } from './pages/cookbook/cookbook.component';
 import { MedicineComponent } from './pages/medicine/medicine.component';
 import { AppBarComponent } from './components/app-bar/app-bar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { SelfHelpComponent } from './pages/self-help/self-help.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
         MedicineComponent,
         AppBarComponent,
         ProfileComponent,
+        SelfHelpComponent,
     ],
     imports: [
         BrowserModule,

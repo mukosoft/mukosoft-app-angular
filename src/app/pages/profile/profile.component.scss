@@ -9,6 +9,11 @@
     text-align: center;
   }
 
+  .profile-input__file {
+    position: absolute;
+    opacity: 0;
+  }
+
   .profile-row {
     display: flex;
     justify-content: center;

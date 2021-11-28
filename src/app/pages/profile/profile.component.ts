@@ -28,4 +28,22 @@ export class ProfileComponent implements OnInit {
     this.profileService.setAboutMe(value);
     this.likes = this.profileService.getAboutMe();
   }
+
+  setProfileImage(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const file = (target.files as FileList)[0];
+    const fileReader = new FileReader();
+
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      if (fileReader.result) {
+        const result = fileReader.result.toString();
+        this.profileService.setProfileImage(result);
+      }
+    }
+  }
+
+  getProfileImage(): string {
+    return this.profileService.getProfileImage() || ProfileService.getDefaultProfileImage();
+  }
 }

@@ -1,10 +1,11 @@
 <div class="profile">
     <div class="profile-row profile-name__container">
-        <img class="profile-image" src="https://picsum.photos/id/237/200/300" alt="profile image" />
-        <span [ngClass]="nameEditMode ? 'fr fi-rr-disk' : 'fr fi-rr-pencil'" (click)="nameEditMode = !nameEditMode"></span>
+        <img class="profile-image" src="{{getProfileImage()}}" alt="profile image" />
+        <input class="profile-input__file" type="file" (change)="setProfileImage($event)" typeof="image/jpg" />
+        <span class="fr fi-rr-pencil"></span>
     </div>
     <div class="profile-row profile-name__container">
-        <h3 *ngIf="!nameEditMode">{{name}}</h3>
+        <h2 *ngIf="!nameEditMode">{{name}}</h2>
         <input *ngIf="nameEditMode" #nameInput type="text" class="profile-input-text__name" (focusout)="setName(nameInput.value)" value="{{name}}" />
         <span [ngClass]="nameEditMode ? 'fr fi-rr-disk' : 'fr fi-rr-pencil'" (click)="nameEditMode = !nameEditMode"></span>
     </div>
