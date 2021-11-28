@@ -1,0 +1,11 @@
+.home-greeting__container {
+  padding: 4rem 0 3rem 0;
+  .home-greeting__hello, .home-greeting__name {
+    padding: 0; margin: 0;
+  }
+
+  .home-greeting__hello {
+    font-weight: normal;
+    padding: 0 0 .5rem 0;
+  }
+}

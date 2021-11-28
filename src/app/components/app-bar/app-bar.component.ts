@@ -5,8 +5,9 @@ import {Component, Input} from '@angular/core';
   templateUrl: './app-bar.component.html'
 })
 export class AppBarComponent {
-  @Input() iconClass?: string;
-  @Input() iconLink?: string;
+  @Input() rightIconClass?: string;
+  @Input() leftIconClass?: string;
+  @Input() rightIconLink?: string;
+  @Input() leftIconLink?: string;
   @Input() title: string = "";
-
 }

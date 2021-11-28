@@ -1,5 +1,10 @@
-<app-app-bar [title]="'MukoSoft'" [iconClass]="'fi fi-rr-settings-sliders'" [iconLink]="'einstellungen'"></app-app-bar>
-<app-card [header]="'Neuigkeiten'"></app-card>
+<app-app-bar [leftIconClass]="'fi fi-rr-user'" [leftIconLink]="'profil'"
+             [rightIconClass]="'fi fi-rr-settings-sliders'" [rightIconLink]="'einstellungen'"></app-app-bar>
+<div class="home-greeting__container">
+    <h2 class="home-greeting__hello">Hallo,</h2>
+    <h2 class="home-greeting__name">Dominique</h2>
+</div>
+<app-card [header]="'Es gibt Neuigkeiten!'"></app-card>
 <h3>Was zum Kochen benötigt</h3>
 <span>Zufälliges Rezept aus Schnittstelle.</span>
 <h3>Wie geht es dir heute</h3>

@@ -1,0 +1,29 @@
+.profile {
+  .profile-input-text__name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    border-bottom: 2px solid $text-color;
+    margin: 1.4rem 0;
+    text-align: center;
+  }
+
+  .profile-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      padding: 0 1rem;
+    }
+  }
+
+  .profile-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: $border-radius-full;
+    box-shadow: $box-shadow-default;
+  }
+}
