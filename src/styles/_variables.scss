@@ -1,0 +1,27 @@
+// colors
+$text-color: #323232;
+$primary-color: teal;
+$secondary-color: orange;
+$background-color: #f6f6f6;
+$error-color: crimson;
+
+$card-background-color: #ffffff;
+
+$nav-bar-background-color: #ffffff;
+$nav-bar-icon__unselected-color: $text-color;
+$nav-bar-icon__selected-color: $secondary-color;
+
+// shadows
+$box-shadow-default: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.008),
+6.7px 6.7px 5.3px rgba(0, 0, 0, 0.012),
+12.5px 12.5px 10px rgba(0, 0, 0, 0.015),
+22.3px 22.3px 17.9px rgba(0, 0, 0, 0.018),
+41.8px 41.8px 33.4px rgba(0, 0, 0, 0.022),
+100px 100px 80px rgba(0, 0, 0, 0.03);
+
+// radius
+$border-radius-default: 4px;
+$border-radius-full: 999px;
+
+// font size
+$font-size-default: 18px;

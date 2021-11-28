@@ -1,0 +1,9 @@
+<div class="menu-bar__container">
+    <span class="menu-bar__items " *ngFor="let appRoute of routes"
+          [routerLinkActive]="'selected'"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="appRoute.route.path">
+            <span class="{{appRoute.iconClass}}"></span>
+        </a>
+    </span>
+</div>

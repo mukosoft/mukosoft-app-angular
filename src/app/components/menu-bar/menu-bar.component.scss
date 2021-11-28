@@ -1,0 +1,45 @@
+.menu-bar__container {
+    background: $nav-bar-background-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+    box-shadow: $box-shadow-default;
+    border-radius: $border-radius-default;
+
+    .menu-bar__items {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        flex: 1;
+        font-size: 1.4rem;
+        color: $nav-bar-icon__unselected-color;
+
+        a {
+            text-decoration: none;
+        }
+
+        .fi {
+            color: $nav-bar-icon__unselected-color;
+        }
+    }
+
+    .menu-bar__items.selected {
+        color: $nav-bar-icon__selected-color;
+        font-weight: bold;
+
+        .fi {
+            color: $nav-bar-icon__selected-color;
+        }
+
+        &::before {
+            border-radius: 100%;
+            position: absolute;
+            background: $nav-bar-icon__selected-color;
+            bottom: 20px;
+            height: 5px;
+            width: 5px;
+            content: '';
+        }
+    }
+}

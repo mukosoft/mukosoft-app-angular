@@ -1,0 +1,8 @@
+@import "./variables";
+@import "./utils";
+@import "./global";
+
+// components
+@import "./src/app/app.component";
+@import "./src/app/components/menu-bar/menu-bar.component";
+@import "./src/app/components/card/card.component";
