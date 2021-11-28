@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {AppRoute} from "./models/app-route";
-import {SettingsComponent} from "./pages/settings/settings.component";
 import {HomeComponent} from "./pages/home/home.component";
 import {CookbookComponent} from "./pages/cookbook/cookbook.component";
 import {MedicineComponent} from "./pages/medicine/medicine.component";
-import {ProfileComponent} from "./pages/profile/profile.component"; // CLI imports router
+import {ProfileComponent} from "./pages/profile/profile.component";
 
 export const appRoutes: AppRoute[] = [
     { route: { path: "", component: HomeComponent}, iconClass: "fi fi-rr-home" },
