@@ -7,5 +7,5 @@ import {appRoutes} from "../../app.routing";
   templateUrl: './menu-bar.component.html'
 })
 export class MenuBarComponent {
-  routes: AppRoute[] = appRoutes;
+  routes: AppRoute[] = appRoutes.filter(route => route.visibleOnMenu);
 }

@@ -1,8 +1,13 @@
 <div class="app-bar">
+    <div *ngIf="leftIconClass" class="app-bar__icon">
+        <a [routerLink]="leftIconLink">
+            <span class="{{leftIconClass}}"></span>
+        </a>
+    </div>
     <h1 class="app-bar__title">{{title}}</h1>
-    <div class="app-bar__icon">
-        <a [routerLink]="iconLink">
-            <span class="{{iconClass}}"></span>
+    <div *ngIf="rightIconClass" class="app-bar__icon">
+        <a [routerLink]="rightIconLink">
+            <span class="{{rightIconClass}}"></span>
         </a>
     </div>
 </div>
