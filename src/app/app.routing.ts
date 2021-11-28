@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {AppComponent} from "./app.component";
-import {AppRoute} from "./models/app-route"; // CLI imports router
+import {AppRoute} from "./models/app-route";
+import {SettingsComponent} from "./pages/settings/settings.component";
+import {HomeComponent} from "./pages/home/home.component";
+import {CookbookComponent} from "./pages/cookbook/cookbook.component";
+import {MedicineComponent} from "./pages/medicine/medicine.component";
+import {ProfileComponent} from "./pages/profile/profile.component"; // CLI imports router
 
 export const appRoutes: AppRoute[] = [
-    { route: { path: "", component: AppComponent}, iconClass: "fi fi-rr-home" },
-    { route: { path: "kochbuch", component: AppComponent}, iconClass: "fi fi-rr-carrot" },
-    { route: { path: "medikamente", component: AppComponent}, iconClass: "fi fi-rr-medicine" },
-    { route: { path: "einstellungen", component: AppComponent}, iconClass: "fi fi-rr-settings" },
+    { route: { path: "", component: HomeComponent}, iconClass: "fi fi-rr-home" },
+    { route: { path: "kochbuch", component: CookbookComponent}, iconClass: "fi fi-rr-carrot" },
+    { route: { path: "medikamente", component: MedicineComponent}, iconClass: "fi fi-rr-medicine" },
+    { route: { path: "profil", component: ProfileComponent}, iconClass: "fi fi-rr-user" },
 ];
 
 const routes = appRoutes.map((route) => route.route);
