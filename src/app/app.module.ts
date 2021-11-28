@@ -14,6 +14,7 @@ import { MedicineComponent } from './pages/medicine/medicine.component';
 import { AppBarComponent } from './components/app-bar/app-bar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SelfHelpComponent } from './pages/self-help/self-help.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -31,6 +32,7 @@ import { SelfHelpComponent } from './pages/self-help/self-help.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
