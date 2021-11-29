@@ -24,9 +24,6 @@ export class SelfHelpComponent implements OnInit {
         // TODO: My-Doc API should return a list of selbsthilfegruppen for mukoviszidose
         const groups = [
             "b22c3ba0-99e1-11eb-9c65-64652e69642d",
-            "b22c3ba0-99e1-11eb-9c65-64652e69642d",
-            "ca718dfc-c509-11eb-b6b9-64652e69642d",
-            "ca718dfc-c509-11eb-b6b9-64652e69642d",
             "ca718dfc-c509-11eb-b6b9-64652e69642d"
         ];
 
