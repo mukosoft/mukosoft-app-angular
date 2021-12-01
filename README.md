@@ -1,4 +1,5 @@
 # MukosoftAppAngular
+[![Build & Test](https://github.com/mukosoft/mukosoft-app-angular/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/mukosoft/mukosoft-app-angular/actions/workflows/build_and_test.yml)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
