@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {lastValueFrom} from "rxjs";
 import {Doctor} from "../../models/my-doc/Doctor";
 import {SelfHelpService} from "../../services/self-help-service/self-help.service";
 import {MyDocResponse} from "../../models/my-doc/MyDocResponse";
