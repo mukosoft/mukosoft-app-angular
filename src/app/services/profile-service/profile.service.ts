@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HumanName, Patient} from "fhir/r4";
+import {HumanName, Identifier, Patient} from "fhir/r4";
+import { v4 as uuidv4 } from "uuid";
 
 export enum PROFILE {
   ABOUT_ME = "ABOUT_ME",
@@ -19,8 +20,14 @@ export class ProfileService {
       text: this.DEFAULT_NAME
     };
 
+    const uuid = `urn:uuid:${uuidv4()}`
+    const identifier: Identifier = {
+      value: uuid
+    }
+
     const patient: Patient = {
       resourceType: "Patient",
+      identifier: [identifier],
       name: [name]
     }
 
