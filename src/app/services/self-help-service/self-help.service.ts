@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {group} from "@angular/animations";
 
 export enum SELF_HELP {
     FAVOURITE_GROUPS = "FAVORITE_GROUPS"
@@ -11,7 +12,11 @@ export class SelfHelpService {
 
     addFavoriteGroup(groupId: number) {
         const favGroups = localStorage.getItem(SELF_HELP.FAVOURITE_GROUPS) || "";
-        let favGroupsArray = favGroups.split(",");
+        let favGroupsArray: string[] = [];
+
+        if (favGroups !== "") {
+            favGroupsArray = favGroups.split(",")
+        }
 
         // group id is not favorite already
         if (!this.isGroupFavorite(groupId)) {
@@ -34,8 +39,13 @@ export class SelfHelpService {
 
     isGroupFavorite(groupId: number): boolean {
         const favGroups = localStorage.getItem(SELF_HELP.FAVOURITE_GROUPS) || "";
-        let favGroupsArray = favGroups.split(",");
+        let favGroupsArray: string[] = [];
 
-        return favGroupsArray.indexOf(groupId.toString()) === 1;
+
+        if (favGroups !== "") {
+            favGroupsArray = favGroups.split(",")
+        }
+
+        return favGroupsArray.indexOf(groupId.toString()) >= 0;
     }
 }
