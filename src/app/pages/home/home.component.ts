@@ -6,12 +6,11 @@ import {PROFILE, ProfileService} from "../../services/profile-service/profile.se
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  name: string = PROFILE.NAME;
+  name: string = "";
 
   constructor(public readonly profileService: ProfileService) { }
 
   ngOnInit(): void {
     this.name = this.profileService.getName()
   }
-
 }

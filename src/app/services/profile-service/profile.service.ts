@@ -1,22 +1,59 @@
 import { Injectable } from '@angular/core';
+import {HumanName, Patient} from "fhir/r4";
 
 export enum PROFILE {
-  NAME = "NAME",
   ABOUT_ME = "ABOUT_ME",
-  PROFILE_IMG = "PROFILE_IMG"
+  PROFILE_IMG = "PROFILE_IMG",
+  FHIR_PATIENT = "FHIR_PATIENT"
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
+  DEFAULT_NAME = "Schleimii";
+
+  initializeProfile() {
+    const name: HumanName = {
+      use: "nickname",
+      text: this.DEFAULT_NAME
+    };
+
+    const patient: Patient = {
+      resourceType: "Patient",
+      name: [name]
+    }
+
+    localStorage.setItem(PROFILE.FHIR_PATIENT, JSON.stringify(patient));
+  }
+
+  getDeserializedProfile(): Patient {
+    return JSON.parse(localStorage.getItem(PROFILE.FHIR_PATIENT) || "{}");
+  }
+
+  serializeProfile(patient: Patient): string {
+    return JSON.stringify(patient);
+  }
 
   getName(): string {
-    return localStorage.getItem(PROFILE.NAME) || "Schleimii";
+    const fhirPatient: Patient = this.getDeserializedProfile();
+    let name: HumanName = {};
+    if (fhirPatient.name) {
+      name = fhirPatient.name[0];
+    }
+
+    return name.text || this.DEFAULT_NAME;
   }
 
   setName(value: string) {
-    localStorage.setItem(PROFILE.NAME, value);
+    const fhirPatient: Patient = this.getDeserializedProfile();
+    if (fhirPatient.name) {
+      fhirPatient.name[0].text = value;
+    }
+
+    const fhirPatientString = this.serializeProfile(fhirPatient);
+
+    localStorage.setItem(PROFILE.FHIR_PATIENT, fhirPatientString);
   }
 
   getAboutMe(): string {

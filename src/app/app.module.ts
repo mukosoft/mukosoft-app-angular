@@ -15,6 +15,7 @@ import { AppBarComponent } from './components/app-bar/app-bar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SelfHelpComponent } from './pages/self-help/self-help.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { IntroComponent } from './components/intro/intro.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
         AppBarComponent,
         ProfileComponent,
         SelfHelpComponent,
+        IntroComponent,
     ],
     imports: [
         BrowserModule,

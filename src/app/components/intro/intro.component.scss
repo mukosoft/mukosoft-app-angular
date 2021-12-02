@@ -1,0 +1,29 @@
+.intro__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+
+  .intro__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+
+    .intro__item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .intro__actions {
+    button {
+      margin: 0 .5rem;
+    }
+  }
+}
