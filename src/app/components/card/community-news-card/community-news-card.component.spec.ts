@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelfHelpComponent } from './self-help.component';
+import { CommunityNewsCardComponent } from './community-news-card.component';
 
-describe('SelfHelpComponent', () => {
-  let component: SelfHelpComponent;
-  let fixture: ComponentFixture<SelfHelpComponent>;
+describe('CommunityNewsCardComponent', () => {
+  let component: CommunityNewsCardComponent;
+  let fixture: ComponentFixture<CommunityNewsCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelfHelpComponent ]
+      declarations: [ CommunityNewsCardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SelfHelpComponent);
+    fixture = TestBed.createComponent(CommunityNewsCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,7 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { ProfileService } from './profile.service';
+import { ProfileService } from "./profile.service";
+import {HumanName, Patient} from "fhir/r4";
 
 describe('ProfileService', () => {
   let service: ProfileService;
@@ -10,7 +11,13 @@ describe('ProfileService', () => {
     service = TestBed.inject(ProfileService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  describe("serialization / deserialization", () => {
+    it("should serialize a patient", () => {
+      const patient: Patient = {
+        resourceType: "Patient"
+      }
+
+      expect(service.serializeProfile(patient)).toBe(`{"resourceType":"Patient"}`);
+    })
+  })
 });

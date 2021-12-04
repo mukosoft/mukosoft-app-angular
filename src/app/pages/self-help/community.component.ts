@@ -1,17 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Doctor} from "../../models/my-doc/Doctor";
-import {SelfHelpService} from "../../services/self-help-service/self-help.service";
+import {CommunityService} from "../../services/community-service/community.service";
 import {MyDocResponse} from "../../models/my-doc/MyDocResponse";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-self-help',
-    templateUrl: './self-help.component.html'
+    templateUrl: './community.component.html'
 })
-export class SelfHelpComponent implements OnInit {
+export class CommunityComponent implements OnInit {
     groups: Doctor[] = [];
 
-    constructor(private readonly httpClient: HttpClient, private readonly selfHelpService: SelfHelpService) {
+    constructor(private readonly httpClient: HttpClient,
+                private readonly selfHelpService: CommunityService,
+                private readonly router: Router) {
     }
 
     ngOnInit(): void {
@@ -35,15 +38,15 @@ export class SelfHelpComponent implements OnInit {
         )
     }
 
-    addGroupToFavorite(groupId: number) {
+    addGroupToFavorite(groupId: string) {
         this.selfHelpService.addFavoriteGroup(groupId);
     }
 
-    deleteGroupFromFavorite(groupId: number) {
+    deleteGroupFromFavorite(groupId: string) {
         this.selfHelpService.deleteGroupFromFavorite(groupId);
     }
 
-    isGroupFavorite(groupId: number) {
+    isGroupFavorite(groupId: string) {
         return this.selfHelpService.isGroupFavorite(groupId);
     }
 

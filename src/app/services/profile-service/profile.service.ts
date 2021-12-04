@@ -8,6 +8,14 @@ export enum PROFILE {
   FHIR_PATIENT = "FHIR_PATIENT"
 }
 
+/**
+ * Service for crud the profile.
+ *
+ * This uses the FHIR Patient model.
+ * @see http://www.hl7.org/fhir/patient.html
+ *
+ * @author Dominique Börner
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -72,6 +80,7 @@ export class ProfileService {
   }
 
   getProfileImage(): string {
+    // TODO: user Patient/photo (see http://www.hl7.org/fhir/patient.html)
     return localStorage.getItem(PROFILE.PROFILE_IMG) || ProfileService.getDefaultProfileImage();
   }
 

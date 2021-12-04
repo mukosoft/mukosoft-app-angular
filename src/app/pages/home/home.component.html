@@ -5,9 +5,9 @@
     <h2 class="home-greeting__hello">Hallo,</h2>
     <h2 class="home-greeting__name">{{name}}</h2>
 </div>
-<app-card [header]="'Es gibt Neuigkeiten!'"></app-card>
-<h3>Was zum Kochen benötigt</h3>
-<span>Zufälliges Rezept aus Schnittstelle.</span>
-<h3>Wie geht es dir heute</h3>
-<h3>Übersicht Vitalwerte</h3>
-<h3>...</h3>
+<div *ngIf="!userHasNews()">
+    <h3>Du hast bisher keine Neuigkeiten. <a [routerLink]="'selbsthilfegruppen'">Folge jetzt anderen Communities!</a></h3>
+</div>
+<div *ngFor="let communityNews of news">
+    <app-community-news-card [news]="communityNews"></app-community-news-card>
+</div>

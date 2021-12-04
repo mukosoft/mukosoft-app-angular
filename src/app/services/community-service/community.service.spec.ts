@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SelfHelpService } from './self-help.service';
+import { CommunityService } from './community.service';
 
 describe('SelfHelpService', () => {
-  let service: SelfHelpService;
+  let service: CommunityService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SelfHelpService);
+    service = TestBed.inject(CommunityService);
   });
 
   it('should be created', () => {

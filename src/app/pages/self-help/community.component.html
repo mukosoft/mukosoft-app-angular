@@ -14,12 +14,14 @@
         <h4 *ngIf="group.city ||group.state" class="self-help-card__location">{{renderLocation(group)}}</h4>
         <div class="self-help-card__actions">
             <div class="self-help-card__actions-start">
-                <span *ngIf="!isGroupFavorite(group.id)" class="fi fi-rr-heart" (click)="this.addGroupToFavorite(group.id)"></span>
-                <span *ngIf="isGroupFavorite(group.id)" class="fi fi-sr-heart favorite" (click)="this.deleteGroupFromFavorite(group.id)"></span>
+                <span *ngIf="!isGroupFavorite(group.uuid)" class="fi fi-rr-heart" (click)="this.addGroupToFavorite(group.uuid)"></span>
+                <span *ngIf="isGroupFavorite(group.uuid)" class="fi fi-sr-heart favorite" (click)="this.deleteGroupFromFavorite(group.uuid)"></span>
                 <span class="fi fi-rr-comment"></span>
             </div>
             <div class="self-help-card__actions-end">
-                <span class="fi fi-rr-angle-small-right"></span>
+                <a [routerLink]="['/selbsthilfegruppe', group.uuid]">
+                    <span class="fi fi-rr-angle-small-right"></span>
+                </a>
             </div>
         </div>
     </div>

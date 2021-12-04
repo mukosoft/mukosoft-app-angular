@@ -13,9 +13,11 @@ import { CookbookComponent } from './pages/cookbook/cookbook.component';
 import { MedicineComponent } from './pages/medicine/medicine.component';
 import { AppBarComponent } from './components/app-bar/app-bar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { SelfHelpComponent } from './pages/self-help/self-help.component';
+import { CommunityComponent } from './pages/self-help/community.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { IntroComponent } from './components/intro/intro.component';
+import { CommunityDetailComponent } from './pages/self-help/community-detail/community-detail.component';
+import { CommunityNewsCardComponent } from './components/card/community-news-card/community-news-card.component';
 
 @NgModule({
     declarations: [
@@ -28,8 +30,10 @@ import { IntroComponent } from './components/intro/intro.component';
         MedicineComponent,
         AppBarComponent,
         ProfileComponent,
-        SelfHelpComponent,
+        CommunityComponent,
         IntroComponent,
+        CommunityDetailComponent,
+        CommunityNewsCardComponent,
     ],
     imports: [
         BrowserModule,
