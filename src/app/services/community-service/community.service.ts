@@ -57,7 +57,11 @@ export class CommunityService {
 
     getGroups(): string[] {
         const groups = localStorage.getItem(SELF_HELP.FAVOURITE_GROUPS) || "";
-        return groups.split(",");
+        let groupsArr: string[] = [];
+        if (groups !== "") {
+            groupsArr = groups.split(",");
+        }
+        return groupsArr;
     }
 
     getCommunityNews(): any {

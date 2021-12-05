@@ -11,7 +11,6 @@ import {AppComponent} from './app.component';
 import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
 import { AppBarComponent } from './components/app-bar/app-bar.component';
 import { IntroComponent } from './components/intro/intro.component';
-import { CommunityNewsCardComponent } from './components/card/community-news-card/community-news-card.component';
 
 // pages
 import { CommunityDetailComponent } from './pages/community/community-detail/community-detail.component';
@@ -23,6 +22,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { CommunityComponent } from './pages/community/community.component';
 import { KawaiiLoadingBarComponent } from './components/kawaii-loading-bar/kawaii-loading-bar.component';
 import {AngularKawaiiModule} from "angular-kawaii";
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
     declarations: [
@@ -37,8 +37,8 @@ import {AngularKawaiiModule} from "angular-kawaii";
         CommunityComponent,
         IntroComponent,
         CommunityDetailComponent,
-        CommunityNewsCardComponent,
         KawaiiLoadingBarComponent,
+        CardComponent,
     ],
     imports: [
         BrowserModule,

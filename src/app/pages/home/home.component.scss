@@ -9,3 +9,35 @@
     padding: 0 0 .5rem 0;
   }
 }
+
+.community-card-actions__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 .5rem;
+  align-items: center;
+
+  .fi:not(:last-child) {
+    padding: 0 1rem 0 0;
+  }
+}
+
+.status__no-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h3 {
+    padding: .5rem 0; margin: 0;
+    opacity: .4;
+    font-size: 1rem;
+  }
+
+  .follow-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}

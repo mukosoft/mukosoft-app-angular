@@ -5,14 +5,29 @@
     <h2 class="home-greeting__hello">Hallo,</h2>
     <h2 class="home-greeting__name">{{name}}</h2>
 </div>
-<div *ngIf="!userHasNews()">
-    <h3>Du hast bisher keine Neuigkeiten. <a [routerLink]="'selbsthilfegruppen'">Folge jetzt anderen Communities!</a></h3>
+<div *ngIf="!userHasNews()" class="status__no-news">
+    <SpeechBubble [size]="80" [mood]="'sad'" [color]="'orange'"></SpeechBubble>
+    <h3>Du hast bisher keine Neuigkeiten.</h3>
+    <a [routerLink]="'selbsthilfegruppen'" class="follow-link">Folge jetzt anderen Communities!</a>
 </div>
 <div *ngIf="isLoading && userHasNews()">
     <app-kawaii-loading-bar></app-kawaii-loading-bar>
 </div>
 <div>
     <div *ngFor="let communityNews of news">
-        <app-community-news-card [news]="communityNews"></app-community-news-card>
+        <app-card [title]="communityNews.name" [secondaryText]="communityNews.created_at.toString()"
+                  [image]="'https://picsum.photos/id/27/1000/1000'"
+                  [headerImage]="'https://picsum.photos/id/237/1000/1000'"
+                  [article]="this.formatService.trimString(communityNews.content)" [actions]="actions">
+            <ng-template #actions>
+                <div class="community-card-actions__container">
+                    <div>
+                        <span class="fi fi-rr-comment"></span>
+                        <span class="fi fi-rr-share"></span>
+                    </div>
+                    <span class="fi fi-rr-angle-small-right"></span>
+                </div>
+            </ng-template>
+        </app-card>
     </div>
 </div>

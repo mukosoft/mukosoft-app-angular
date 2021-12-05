@@ -4,6 +4,7 @@ import {MyDocResponse} from "../../models/my-doc/MyDocResponse";
 import {HttpClient} from "@angular/common/http";
 import {CommunityService} from "../../services/community-service/community.service";
 import {NewsItem} from "../../models/my-doc/NewsItem";
+import {FormatService} from "../../services/format-service/format.service";
 
 @Component({
     selector: 'app-home',
@@ -16,7 +17,8 @@ export class HomeComponent implements OnInit {
 
     constructor(public readonly profileService: ProfileService,
                 private readonly httpClient: HttpClient,
-                private readonly communityService: CommunityService) {
+                private readonly communityService: CommunityService,
+                public readonly formatService: FormatService) {
     }
 
     ngOnInit(): void {
@@ -32,6 +34,6 @@ export class HomeComponent implements OnInit {
     }
 
     userHasNews() {
-        return this.communityService.getGroups().length-1 > 0;
+        return this.communityService.getGroups().length > 0;
     }
 }
