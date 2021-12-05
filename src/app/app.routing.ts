@@ -6,8 +6,8 @@ import {CookbookComponent} from "./pages/cookbook/cookbook.component";
 import {MedicineComponent} from "./pages/medicine/medicine.component";
 import {ProfileComponent} from "./pages/profile/profile.component";
 import {SettingsComponent} from "./pages/settings/settings.component";
-import {CommunityComponent} from "./pages/self-help/community.component";
-import {CommunityDetailComponent} from "./pages/self-help/community-detail/community-detail.component";
+import {CommunityComponent} from "./pages/community/community.component";
+import {CommunityDetailComponent} from "./pages/community/community-detail/community-detail.component";
 
 export const appRoutes: AppRoute[] = [
     { route: { path: "", component: HomeComponent}, iconClass: "fi fi-rr-home", visibleOnMenu: true },

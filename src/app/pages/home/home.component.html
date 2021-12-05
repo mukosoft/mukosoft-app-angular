@@ -8,6 +8,11 @@
 <div *ngIf="!userHasNews()">
     <h3>Du hast bisher keine Neuigkeiten. <a [routerLink]="'selbsthilfegruppen'">Folge jetzt anderen Communities!</a></h3>
 </div>
-<div *ngFor="let communityNews of news">
-    <app-community-news-card [news]="communityNews"></app-community-news-card>
+<div *ngIf="isLoading && userHasNews()">
+    <app-kawaii-loading-bar></app-kawaii-loading-bar>
+</div>
+<div>
+    <div *ngFor="let communityNews of news">
+        <app-community-news-card [news]="communityNews"></app-community-news-card>
+    </div>
 </div>

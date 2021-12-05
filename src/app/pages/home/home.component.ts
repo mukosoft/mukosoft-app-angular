@@ -12,6 +12,7 @@ import {NewsItem} from "../../models/my-doc/NewsItem";
 export class HomeComponent implements OnInit {
     name: string = "";
     news: NewsItem[] = [];
+    isLoading = true;
 
     constructor(public readonly profileService: ProfileService,
                 private readonly httpClient: HttpClient,
@@ -26,10 +27,11 @@ export class HomeComponent implements OnInit {
                     this.news = this.news.concat(response.data["DoctorNewsItems"]);
                 }
             });
+            this.isLoading = false;
         });
     }
 
     userHasNews() {
-        return this.news.length > 0;
+        return this.communityService.getGroups().length-1 > 0;
     }
 }

@@ -1,0 +1,13 @@
+.kawaii-loader__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-family: "Comic Sans MS";
+    color: $secondary-color;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-size: 1.2rem;
+  }
+}

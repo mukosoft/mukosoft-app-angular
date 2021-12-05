@@ -22,4 +22,17 @@
   .community-news-card__text {
     line-height: $line-height-default;
   }
+
+  .community-news-card__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    .fi {
+      font-size: $font-size-icon-label;
+      display: flex;
+      color: $primary-color;
+    }
+  }
 }
