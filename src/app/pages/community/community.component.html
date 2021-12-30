@@ -1,28 +1,13 @@
-<h2>Selbsthilfegruppen</h2>
-<div class="self-help-toolbar__container">
-    <div class="self-help-toolbar__action">
-        <span class="fi fi-rr-search"></span>
+<div class="container max-container">
+    <div class="row">
+        <div class="col-12 py-4">
+            <h2>Unsere Community</h2>
+            <muko-community-toolbar (textInputEmitter)="searchCommunity($event)"></muko-community-toolbar>
+        </div>
     </div>
-    <div class="self-help-toolbar__action">
-        <span class="fr fi-rr-location-alt"></span>
-    </div>
-</div>
-<div class="self-help-card__container" *ngFor="let group of groups">
-    <img *ngIf="group.icon" class="self-help-card__icon" src="{{group.icon}}" alt="logo der {{group.company}}"/>
-    <div class="self-help-card__content">
-        <h4 class="self-help-card__name">{{group.company}}</h4>
-        <h4 *ngIf="group.city ||group.state" class="self-help-card__location">{{renderLocation(group)}}</h4>
-        <div class="self-help-card__actions">
-            <div class="self-help-card__actions-start">
-                <span *ngIf="!isGroupFavorite(group.uuid)" class="fi fi-rr-heart" (click)="this.addGroupToFavorite(group.uuid)"></span>
-                <span *ngIf="isGroupFavorite(group.uuid)" class="fi fi-sr-heart favorite" (click)="this.deleteGroupFromFavorite(group.uuid)"></span>
-                <span class="fi fi-rr-comment"></span>
-            </div>
-            <div class="self-help-card__actions-end">
-                <a [routerLink]="['/selbsthilfegruppe', group.uuid]">
-                    <span class="fi fi-rr-angle-small-right"></span>
-                </a>
-            </div>
+    <div class="row">
+        <div class="col-12" *ngFor="let group of filteredGroups">
+            <muko-community-card [community]="group"></muko-community-card>
         </div>
     </div>
 </div>

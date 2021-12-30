@@ -1,0 +1,30 @@
+<div class="card mb-4">
+    <img *ngIf="community.icon" class="card-img-top" [src]="community.icon" alt=""/>
+    <div class="card-header">
+        <h5 class="card-title">{{community.company}}</h5>
+        <h6 class="card-subtitle">{{community.city || community.state}}</h6>
+    </div>
+    <div class="card-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <span *ngIf="!isGroupFavorite(community.uuid)" class="fi fi-rr-heart"
+                          (click)="this.addGroupToFavorite(community.uuid)"></span>
+                    <span *ngIf="isGroupFavorite(community.uuid)" class="fi fi-sr-heart favorite text-danger"
+                          (click)="this.deleteGroupFromFavorite(community.uuid)"></span>
+                </div>
+                <div class="col-1">
+                    <span class="fi fi-rr-comment"></span>
+                </div>
+                <div class="offset-9 col-1">
+                    <a class="text-decoration-none" [routerLink]="['/selbsthilfegruppe', community.uuid]">
+                        <button class="btn btn-secondary">
+                            <span class="fi fi-rr-angle-small-right"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

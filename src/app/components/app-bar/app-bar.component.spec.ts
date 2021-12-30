@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AppBarComponent } from './app-bar.component';
+import { AppBarComponent } from "./app-bar.component";
 
-describe('AppBarComponent', () => {
+describe("AppBarComponent", () => {
   let component: AppBarComponent;
   let fixture: ComponentFixture<AppBarComponent>;
 
@@ -19,7 +19,7 @@ describe('AppBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,3 +1,6 @@
+import {File} from "./File";
+import {Employee} from "./Employee";
+
 export interface Doctor {
     id: number;
     uuid: string;
@@ -13,6 +16,8 @@ export interface Doctor {
     county?: string | undefined;
     state?: string | null;
     country: string;
+    File?: File[];
+    Employees?: Employee[];
     address_supplement: string | undefined;
     gender?: string | null;
     lat?: string | null;

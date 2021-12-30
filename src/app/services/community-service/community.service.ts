@@ -1,16 +1,19 @@
-import {Injectable} from '@angular/core';
-import {group} from "@angular/animations";
+import {Injectable} from "@angular/core";
 import {MyDocResponse} from "../../models/my-doc/MyDocResponse";
-import {NewsItem} from "../../models/my-doc/NewsItem";
 import {HttpClient} from "@angular/common/http";
-import {concat, concatMap, forkJoin, from, Observable, of, Subscribable} from "rxjs";
+import {forkJoin}from "rxjs";
 
 export enum SELF_HELP {
     FAVOURITE_GROUPS = "FAVORITE_GROUPS"
 }
 
+/**
+ * CommunityService
+ *
+ * This service handles news and content from the community.
+ */
 @Injectable({
-    providedIn: 'root'
+    providedIn: "root"
 })
 export class CommunityService {
 

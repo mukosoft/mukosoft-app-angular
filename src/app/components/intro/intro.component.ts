@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 import {Intro} from "../../models/intro";
 import {AppService} from "../../services/app-service/app.service";
 import {ProfileService} from "../../services/profile-service/profile.service";
 
 @Component({
-  selector: 'app-intro',
-  templateUrl: './intro.component.html'
+  selector: "muko-intro",
+  templateUrl: "./intro.component.html"
 })
 export class IntroComponent {
   introItems: Intro[] = [];

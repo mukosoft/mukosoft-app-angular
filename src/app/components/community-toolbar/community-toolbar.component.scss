@@ -1,0 +1,26 @@
+.self-help-toolbar__container {
+  display: flex;
+  position: sticky;
+  top: .5rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  .self-help-toolbar__action {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: $box-shadow-default;
+    border-radius: $border-radius-default;
+    padding: .5rem;
+    height: 40px;
+    min-width: 40px;
+    margin: 0 .5rem 0 0;
+
+    input {
+      display: flex;
+      background: transparent;
+    }
+  }
+}

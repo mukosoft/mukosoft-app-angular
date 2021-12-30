@@ -1,0 +1,11 @@
+<div class="self-help-toolbar__container">
+    <div class="self-help-toolbar__action">
+        <span class="fi fi-rr-search"></span>
+        <input #communityTextInput
+               type="text" placeholder="Suchen..."
+               (keyup)="onTextInput(communityTextInput.value)" />
+    </div>
+    <div class="self-help-toolbar__action">
+        <span class="fr fi-rr-location-alt"></span>
+    </div>
+</div>

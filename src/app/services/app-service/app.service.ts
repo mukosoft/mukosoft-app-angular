@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 enum APP {
   FIRST_START = "FIRST_START"
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AppService {
 

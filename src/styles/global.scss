@@ -6,14 +6,14 @@ body {
   background: $background-color;
   margin: .5rem;
   font-size: $font-size-default;
-  font-family: Arial, serif;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
+  line-height: 1.35;
 }
 
 input[type="text"] {
   border: none;
-  border-bottom: 2px solid $text-color;
   font-size: 1rem;
+  padding: .5rem;
 }
 
 // buttons
@@ -28,6 +28,7 @@ input[type="text"] {
   &.btn-primary {
     border: 2px solid $button-primary-color;
     background: $button-primary-color;
+
     span {
       color: white;
     }
@@ -35,5 +36,28 @@ input[type="text"] {
 
   &.btn-secondary {
     border: 2px solid $button-secondary-color;
+  }
+}
+
+.img-card-icon {
+  width: 64px;
+  height: 64px;
+  padding: 0 1rem 0 0;
+  object-fit: contain;
+}
+
+.card-text {
+  padding: .5rem 0;
+}
+
+.max-container {
+  max-width: 800px !important;
+}
+
+a {
+  text-decoration: none;
+
+  .fi {
+    text-decoration: none;
   }
 }

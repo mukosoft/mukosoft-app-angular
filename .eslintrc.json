@@ -19,6 +19,7 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "quotes": ["error", "double"],
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -31,7 +32,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": "muko",
             "style": "kebab-case"
           }
         ]

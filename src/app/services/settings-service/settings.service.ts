@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 enum SETTINGS {
   "LANGUAGE" = "LANGUAGE"
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class SettingsService {
 

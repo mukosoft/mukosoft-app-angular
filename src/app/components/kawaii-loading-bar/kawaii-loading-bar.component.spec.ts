@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { KawaiiLoadingBarComponent } from './kawaii-loading-bar.component';
+import { KawaiiLoadingBarComponent } from "./kawaii-loading-bar.component";
 
-describe('KawaiiLoadingBarComponent', () => {
+describe("KawaiiLoadingBarComponent", () => {
   let component: KawaiiLoadingBarComponent;
   let fixture: ComponentFixture<KawaiiLoadingBarComponent>;
 
@@ -19,7 +19,7 @@ describe('KawaiiLoadingBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

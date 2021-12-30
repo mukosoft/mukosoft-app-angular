@@ -1,6 +1,6 @@
 <div class="kawaii-loader__container">
-    <File *ngIf="isLoading" [mood]="'excited'" [color]="'orange'" [size]="80"></File>
+    <File *ngIf="isLoading" mood="excited" color="orange" [size]="80"></File>
     <span *ngIf="isLoading">Lädt ...</span>
-    <File *ngIf="!isLoading" [mood]="'sad'" [color]="'orange'" [size]="80"></File>
+    <File *ngIf="!isLoading" mood="sad" color="orange" [size]="80"></File>
     <span *ngIf="!isLoading">{{loadingFailedMessage}}</span>
 </div>

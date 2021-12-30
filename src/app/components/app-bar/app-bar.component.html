@@ -1,15 +1,12 @@
 <div class="app-bar">
-    <div class="app-bar__image">
-        <a [routerLink]="leftIconLink">
-            <img src="{{this.getProfileImage()}}" alt="profilbild"/>
-        </a>
+    <div class="app-bar__leading">
+        <div class="app-bar__image">
+            <a routerLink="/profil">
+                <muko-avatar [img]="this.getProfileImage()"></muko-avatar>
+            </a>
+        </div>
+        <h2 *ngIf="title">{{title}}</h2>
     </div>
-    <div *ngIf="leftIconClass" class="app-bar__icon">
-        <a [routerLink]="leftIconLink">
-            <span class="{{leftIconClass}}"></span>
-        </a>
-    </div>
-    <h1 class="app-bar__title">{{title}}</h1>
     <div *ngIf="rightIconClass" class="app-bar__icon">
         <a [routerLink]="rightIconLink">
             <span class="{{rightIconClass}}"></span>

@@ -1,0 +1,27 @@
+@import "src/styles/variables";
+
+.avatar {
+  border-radius: 999px;
+  object-fit: contain;
+  padding: .2rem;
+  box-shadow:
+          0 0 0 2px rgba($primary, .3),
+          0 0 0 4px rgba($primary, .2),
+          0 0 0 10px rgba($primary, .1);
+  margin: 1rem;
+
+  &.sm {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.md {
+    width: 64px;
+    height: 64px;
+  }
+
+  &.lg {
+    width: 128px;
+    height: 128px;
+  }
+}

@@ -1,17 +1,6 @@
-.self-help-toolbar__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: $card-background-color;
-  box-shadow: $box-shadow-default;
-  border-radius: $border-radius-default;
-  padding: 1rem;
-  margin: .5rem 0;
-}
-
 .self-help-card__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: $card-background-color;
   box-shadow: $box-shadow-default;
@@ -20,6 +9,8 @@
   margin: .35rem 0;
 
   .self-help-card__content {
+    flex: 1;
+
     .self-help-card__name, .self-help-card__location {
       padding: 0; margin: 0;
     }

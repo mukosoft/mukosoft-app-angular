@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
 import {AppRoute} from "./models/app-route";
 import {HomeComponent} from "./pages/home/home.component";
 import {CookbookComponent} from "./pages/cookbook/cookbook.component";

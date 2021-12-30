@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {HumanName, Identifier, Patient} from "fhir/r4";
 import { v4 as uuidv4 } from "uuid";
 
@@ -9,7 +9,7 @@ export enum PROFILE {
 }
 
 /**
- * Service for crud the profile.
+ * Service for interaction with the profile.
  *
  * This uses the FHIR Patient model.
  * @see http://www.hl7.org/fhir/patient.html
@@ -17,12 +17,15 @@ export enum PROFILE {
  * @author Dominique Börner
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ProfileService {
   DEFAULT_NAME = "Schleimii";
 
-  initializeProfile() {
+  /**
+   * Create an initial user profile and saves it into localStorage.
+   */
+  initializeProfile(): void {
     const name: HumanName = {
       use: "nickname",
       text: this.DEFAULT_NAME
@@ -42,14 +45,25 @@ export class ProfileService {
     localStorage.setItem(PROFILE.FHIR_PATIENT, JSON.stringify(patient));
   }
 
+  /**
+   * Returns the users profile as FHIR Patient resource.
+   */
   getDeserializedProfile(): Patient {
     return JSON.parse(localStorage.getItem(PROFILE.FHIR_PATIENT) || "{}");
   }
 
+  /**
+   * Parses a FHIR Patient resource into a string.
+   *
+   * @param patient
+   */
   serializeProfile(patient: Patient): string {
     return JSON.stringify(patient);
   }
 
+  /**
+   * Get users name.
+   */
   getName(): string {
     const fhirPatient: Patient = this.getDeserializedProfile();
     let name: HumanName = {};
@@ -60,7 +74,12 @@ export class ProfileService {
     return name.text || this.DEFAULT_NAME;
   }
 
-  setName(value: string) {
+  /**
+   * Set users name.
+   *
+   * @param value
+   */
+  setName(value: string): void {
     const fhirPatient: Patient = this.getDeserializedProfile();
     if (fhirPatient.name) {
       fhirPatient.name[0].text = value;
@@ -71,24 +90,42 @@ export class ProfileService {
     localStorage.setItem(PROFILE.FHIR_PATIENT, fhirPatientString);
   }
 
+  /**
+   * Get users about me.
+   */
   getAboutMe(): string {
     return localStorage.getItem(PROFILE.ABOUT_ME) || "Ich mag besonders gerne ...";
   }
 
-  setAboutMe(value: string) {
+  /**
+   * Set users about me.
+   *
+   * @param value
+   */
+  setAboutMe(value: string): void {
     localStorage.setItem(PROFILE.ABOUT_ME, value);
   }
 
+  /**
+   * Get users profile image or the default profile image.
+   */
   getProfileImage(): string {
-    // TODO: user Patient/photo (see http://www.hl7.org/fhir/patient.html)
     return localStorage.getItem(PROFILE.PROFILE_IMG) || ProfileService.getDefaultProfileImage();
   }
 
-  setProfileImage(value: string) {
+  /**
+   * Set users profile image.
+   *
+   * @param value
+   */
+  setProfileImage(value: string): void {
     localStorage.setItem(PROFILE.PROFILE_IMG, value);
   }
 
-  static getDefaultProfileImage() {
+  /**
+   * Returns the default profile image url from assets.
+   */
+  static getDefaultProfileImage(): string {
     return "./../assets/images/profile-default.png";
   }
 }

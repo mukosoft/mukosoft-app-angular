@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 import {AppService} from "./services/app-service/app.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: "muko-root",
+  templateUrl: "./app.component.html",
 })
 export class AppComponent {
   introVisible = false;
