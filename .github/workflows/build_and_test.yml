@@ -33,14 +33,8 @@ jobs:
         run: npm ci
           
       - name: Run Unit Tests
-        run: npm run ci:test
-      
-      - name: Clean Distribution Directory
-        run: npm run ci:clean
+        run: npm run test
         
       - name: Build Application
-        run: npm run ci:build
-      
-      - name: List Files in Distribution Directory
-        run: ls -R ./dist
+        run: npm run build
     

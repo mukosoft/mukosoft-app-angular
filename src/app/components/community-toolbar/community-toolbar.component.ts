@@ -5,7 +5,8 @@ import {Component, EventEmitter, Output} from "@angular/core";
   templateUrl: "./community-toolbar.component.html"
 })
 export class CommunityToolbarComponent {
-  @Output() textInputEmitter: EventEmitter<string> = new EventEmitter<string>();
+  @Output()
+  textInputEmitter: EventEmitter<string> = new EventEmitter<string>();
 
   onTextInput(value: string) {
     this.textInputEmitter.emit(value);

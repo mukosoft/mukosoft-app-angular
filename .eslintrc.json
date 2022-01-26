@@ -19,6 +19,8 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "indent": ["error", 2],
+        "semi": [2, "always"],
         "quotes": ["error", "double"],
         "@angular-eslint/directive-selector": [
           "error",

@@ -6,16 +6,27 @@ import {ProfileService} from "../../services/profile-service/profile.service";
     templateUrl: "./app-bar.component.html"
 })
 export class AppBarComponent implements OnInit {
-    @Input() title: string = "";
 
-    @Input() rightIconClass?: string;
-    @Input() leftIconClass?: string;
-    @Input() rightIconLink?: string;
-    @Input() leftIconLink?: string;
+    @Input()
+    title: string = "";
+
+    @Input()
+    rightIconClass?: string;
+
+    @Input()
+    leftIconClass?: string;
+
+    @Input()
+    rightIconLink?: string;
+
+    @Input()
+    leftIconLink?: string;
 
     profileImage?: string;
 
-    constructor(private readonly profileService: ProfileService) {
+    constructor(
+        private readonly profileService: ProfileService
+    ) {
     }
 
     ngOnInit() {

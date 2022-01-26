@@ -39,8 +39,10 @@ export class ProfileComponent implements OnInit {
       if (fileReader.result) {
         const result = fileReader.result.toString();
         this.profileService.setProfileImage(result);
+      } else {
+        console.error("Error while setting profile image");
       }
-    }
+    };
   }
 
   getProfileImage(): string {

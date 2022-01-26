@@ -2,8 +2,8 @@ import {Component, Input} from "@angular/core";
 import {News} from "../../models/my-doc/News";
 
 @Component({
-  selector: "muko-news-card",
-  templateUrl: "./news-card.component.html"
+    selector: "muko-news-card",
+    templateUrl: "./news-card.component.html"
 })
 export class NewsCardComponent {
   @Input() news: News = {
@@ -19,3 +19,4 @@ export class NewsCardComponent {
     updated_at: new Date()
   };
 }
+

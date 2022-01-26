@@ -19,7 +19,9 @@ describe("CommunityToolbarComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
-    expect(component).toBeTruthy();
+  it("should emit textInput", () => {
+    const spy = spyOn(component.textInputEmitter, "emit");
+    component.onTextInput("foo");
+    expect(spy).toHaveBeenCalledOnceWith("foo");
   });
 });

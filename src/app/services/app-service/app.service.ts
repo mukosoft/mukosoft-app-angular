@@ -8,18 +8,12 @@ enum APP {
   providedIn: "root"
 })
 export class AppService {
-
-  initializeApp() {
-    if (this.getFirstStart() !== "1") {
-      this.setFirstStart("0")
-    }
-  }
-
-  getFirstStart() {
-    return localStorage.getItem(APP.FIRST_START);
-  }
-
   setFirstStart(value: string) {
     localStorage.setItem(APP.FIRST_START, value);
+  }
+
+  isFirstStart(): boolean {
+    return (localStorage.getItem(APP.FIRST_START) === "true")
+        || (localStorage.getItem(APP.FIRST_START) === null);
   }
 }

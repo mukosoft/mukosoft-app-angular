@@ -29,9 +29,9 @@ import { NewsCardComponent } from "./components/news-card/news-card.component";
 import { CommunityCardComponent } from "./components/community-card/community-card.component";
 import {RouterModule} from "@angular/router";
 import {registerLocaleData} from "@angular/common";
-import { AvatarComponent } from './components/avatar/avatar.component';
-import { FileComponent } from './components/file/file.component';
-import { EmployeeComponent } from './components/employee/employee.component';
+import { AvatarComponent } from "./components/avatar/avatar.component";
+import { FileComponent } from "./components/file/file.component";
+import { EmployeeComponent } from "./components/employee/employee.component";
 
 // setting locale for angular pipe localization
 registerLocaleData(localeDe, localeDeExtra);
@@ -62,7 +62,7 @@ registerLocaleData(localeDe, localeDeExtra);
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        AngularKawaiiModule
+        AngularKawaiiModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [{provide: LOCALE_ID, useValue: "de" }],

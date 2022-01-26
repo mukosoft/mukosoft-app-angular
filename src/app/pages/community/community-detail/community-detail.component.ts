@@ -20,7 +20,7 @@ export class CommunityDetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.params.subscribe(params => {
-            this.uuid = params["uuid"]
+            this.uuid = params["uuid"];
         });
         this.getGroupData();
     }
@@ -30,7 +30,6 @@ export class CommunityDetailComponent implements OnInit {
             .subscribe(response => {
                 const data: Doctor = response.data;
                 this.data = data;
-                console.log(this.data)
             });
     }
 

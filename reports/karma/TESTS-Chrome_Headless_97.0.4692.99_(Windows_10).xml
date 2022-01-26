@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 97.0.4692.99 (Windows 10)" package="" timestamp="2022-01-26T15:26:01" id="0" hostname="DESKTOP-ODPIPEN" tests="40" errors="0" failures="0" time="0.132">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36"/>
+  </properties>
+  <testcase name="AppService should be created" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppService"/>
+  <testcase name="KawaiiLoadingBarComponent should create" time="0.019" classname="Chrome_Headless_97_0_4692_99_(Windows_10).KawaiiLoadingBarComponent"/>
+  <testcase name="AvatarComponent should create" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AvatarComponent"/>
+  <testcase name="CommunityDetailComponent should create" time="0.013" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityDetailComponent"/>
+  <testcase name="FileComponent should download file" time="0.004" classname="Chrome_Headless_97_0_4692_99_(Windows_10).FileComponent"/>
+  <testcase name="HomeComponent should create" time="0.008" classname="Chrome_Headless_97_0_4692_99_(Windows_10).HomeComponent"/>
+  <testcase name="CommunityComponent should create" time="0.005" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityComponent"/>
+  <testcase name="IntroComponent should initialize the profile" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).IntroComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="IntroComponent navigation forwards and backwards should navigate to prev if at start" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).IntroComponent navigation forwards and backwards"/>
+  <testcase name="IntroComponent navigation forwards and backwards should navigate to next" time="0.002" classname="Chrome_Headless_97_0_4692_99_(Windows_10).IntroComponent navigation forwards and backwards"/>
+  <testcase name="IntroComponent navigation forwards and backwards should not navigate to next if at end" time="0.002" classname="Chrome_Headless_97_0_4692_99_(Windows_10).IntroComponent navigation forwards and backwards"/>
+  <testcase name="IntroComponent navigation forwards and backwards should navigate to prev" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).IntroComponent navigation forwards and backwards"/>
+  <testcase name="MenuBarComponent should create" time="0.007" classname="Chrome_Headless_97_0_4692_99_(Windows_10).MenuBarComponent"/>
+  <testcase name="CommunityCardComponent should create" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityCardComponent"/>
+  <testcase name="CommunityService Adding and deleting a favourite group should add a favorite group to localStorage" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityService Adding and deleting a favourite group"/>
+  <testcase name="CommunityService Adding and deleting a favourite group should not add a favorite group two times" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityService Adding and deleting a favourite group"/>
+  <testcase name="CommunityService Adding and deleting a favourite group should delete a favorite group from localStorage" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityService Adding and deleting a favourite group"/>
+  <testcase name="CommunityService Adding and deleting a favourite group should not crash, when a not favoured group is deleted" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityService Adding and deleting a favourite group"/>
+  <testcase name="CommunityService Logical utility should return true / false, if a group is favoured" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityService Logical utility"/>
+  <testcase name="CommunityService Logical utility should return a string array of groups" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityService Logical utility"/>
+  <testcase name="AppBarComponent getting profile image should get the default profile image" time="0.004" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppBarComponent getting profile image"/>
+  <testcase name="AppBarComponent getting profile image should get profile image from localStorage" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppBarComponent getting profile image"/>
+  <testcase name="ProfileService initialization should initialize a profile" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).ProfileService initialization"/>
+  <testcase name="ProfileService serialization / deserialization should deserialize a patient" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).ProfileService serialization / deserialization"/>
+  <testcase name="ProfileService serialization / deserialization should serialize a patient" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).ProfileService serialization / deserialization"/>
+  <testcase name="ProfileService setting and getting specific data from the user should set and get user name" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).ProfileService setting and getting specific data from the user"/>
+  <testcase name="ProfileService setting and getting specific data from the user should set and get about me" time="0" classname="Chrome_Headless_97_0_4692_99_(Windows_10).ProfileService setting and getting specific data from the user"/>
+  <testcase name="SettingsService should set the language" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).SettingsService"/>
+  <testcase name="EmployeeComponent should create" time="0.004" classname="Chrome_Headless_97_0_4692_99_(Windows_10).EmployeeComponent"/>
+  <testcase name="CommunityToolbarComponent should emit textInput" time="0.003" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityToolbarComponent"/>
+  <testcase name="MedicineComponent should create" time="0.002" classname="Chrome_Headless_97_0_4692_99_(Windows_10).MedicineComponent"/>
+  <testcase name="CookbookComponent should create" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CookbookComponent"/>
+  <testcase name="ProfileComponent should create" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).ProfileComponent"/>
+  <testcase name="SettingsComponent should create" time="0.004" classname="Chrome_Headless_97_0_4692_99_(Windows_10).SettingsComponent"/>
+  <testcase name="CommunityCardComponent logical utility should return true, if a group is favoured" time="0.005" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityCardComponent logical utility"/>
+  <testcase name="CommunityCardComponent logical utility should return false, if a group is not favoured" time="0.004" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityCardComponent logical utility"/>
+  <testcase name="CommunityCardComponent adding / removing from localStorage should add a favourite group" time="0.002" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityCardComponent adding / removing from localStorage"/>
+  <testcase name="CommunityCardComponent adding / removing from localStorage should remove a favourite group" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityCardComponent adding / removing from localStorage"/>
+  <testcase name="AppComponent initialization of the app should not show a intro" time="0.003" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppComponent initialization of the app"/>
+  <testcase name="AppComponent initialization of the app should show a intro" time="0.001" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppComponent initialization of the app"/>
+  <system-out>
+    <![CDATA[Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0304: 'File' is not a known element:
+1. If 'File' is an Angular component, then verify that it is part of this module.
+2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'size' since it isn't a known property of 'File'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0304: 'SpeechBubble' is not a known element:
+1. If 'SpeechBubble' is an Angular component, then verify that it is part of this module.
+2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'size' since it isn't a known property of 'SpeechBubble'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'mood' since it isn't a known property of 'SpeechBubble'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'color' since it isn't a known property of 'SpeechBubble'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'routerLink' since it isn't a known property of 'a'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0304: 'muko-community-toolbar' is not a known element:
+1. If 'muko-community-toolbar' is an Angular component, then verify that it is part of this module.
+2. If 'muko-community-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0304: 'muko-avatar' is not a known element:
+1. If 'muko-avatar' is an Angular component, then verify that it is part of this module.
+2. If 'muko-avatar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'img' since it isn't a known property of 'muko-avatar'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'routerLink' since it isn't a known property of 'a'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'routerLink' since it isn't a known property of 'a'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'routerLink' since it isn't a known property of 'a'.'
+,Chrome Headless 97.0.4692.99 (Windows 10) ERROR: 'NG0303: Can't bind to 'routerLink' since it isn't a known property of 'a'.'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

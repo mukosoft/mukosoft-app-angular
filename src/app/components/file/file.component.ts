@@ -3,10 +3,12 @@ import {File} from "../../models/my-doc/File";
 
 @Component({
   selector: "muko-file",
-  templateUrl: "./file.component.html"
+  template: "<button class='btn btn-primary' (click)='downloadFile()'>{{file.filename}}</button>"
 })
 export class FileComponent {
-  @Input() file: File = {};
+
+  @Input()
+  file: File = {};
 
   downloadFile(): void {
     if (this.file._url) {

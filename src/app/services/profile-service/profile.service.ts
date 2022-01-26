@@ -31,16 +31,16 @@ export class ProfileService {
       text: this.DEFAULT_NAME
     };
 
-    const uuid = `urn:uuid:${uuidv4()}`
+    const uuid = `urn:uuid:${uuidv4()}`;
     const identifier: Identifier = {
       value: uuid
-    }
+    };
 
     const patient: Patient = {
       resourceType: "Patient",
       identifier: [identifier],
       name: [name]
-    }
+    };
 
     localStorage.setItem(PROFILE.FHIR_PATIENT, JSON.stringify(patient));
   }
@@ -67,6 +67,7 @@ export class ProfileService {
   getName(): string {
     const fhirPatient: Patient = this.getDeserializedProfile();
     let name: HumanName = {};
+
     if (fhirPatient.name) {
       name = fhirPatient.name[0];
     }
@@ -81,9 +82,17 @@ export class ProfileService {
    */
   setName(value: string): void {
     const fhirPatient: Patient = this.getDeserializedProfile();
-    if (fhirPatient.name) {
-      fhirPatient.name[0].text = value;
+
+    if (!fhirPatient.name) {
+      fhirPatient.name = [
+        {
+          use: "nickname",
+          text: this.DEFAULT_NAME
+        }
+      ];
     }
+
+    fhirPatient.name[0].text = value;
 
     const fhirPatientString = this.serializeProfile(fhirPatient);
 

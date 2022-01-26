@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import {ComponentFixture, TestBed, tick} from "@angular/core/testing";
 
 import { ProfileComponent } from "./profile.component";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe("ProfileComponent", () => {
   let component: ProfileComponent;
@@ -8,9 +9,10 @@ describe("ProfileComponent", () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileComponent ]
+      declarations: [ ProfileComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +21,19 @@ describe("ProfileComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
-    expect(component).toBeTruthy();
+  describe("setting profile data", () => {
+    it("should set profile name", () => {
+      localStorage.clear();
+      component.setName("foo");
+      expect(component.name).toBe("foo");
+      expect((component as any).profileService.getName()).toBe("foo");
+    });
+
+    it("should set about me", () => {
+      localStorage.clear();
+      component.setAboutMe("about foo");
+      expect(component.likes).toBe("about foo");
+      expect((component as any).profileService.getAboutMe()).toBe("about foo");
+    });
   });
 });

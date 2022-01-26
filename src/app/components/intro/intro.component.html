@@ -5,13 +5,21 @@
             <article class="intro__text">{{getCurrentText()}}</article>
         </div>
         <div class="intro__actions">
-            <button *ngIf="isNotFirst()" (click)="previousStep()" class="btn btn-secondary">
+            <button *ngIf="isNotFirst()"
+                    (click)="previousStep()"
+                    class="btn btn-secondary"
+            >
                 <span class="fi fi-rr-angle-small-left"></span>
             </button>
-            <button *ngIf="isNotLast()" (click)="nextStep()" class="btn btn-primary">
+            <button *ngIf="isNotLast()"
+                    (click)="nextStep()"
+                    class="btn btn-primary"
+            >
                 <span class="fi fi-rr-angle-small-right"></span>
             </button>
-            <button *ngIf="!isNotLast()" (click)="finishIntro()" class="btn btn-primary">
+            <button *ngIf="!isNotLast()"
+                    (click)="finishIntro()"
+                    class="btn btn-primary">
                 <span>Zur App</span>
             </button>
         </div>

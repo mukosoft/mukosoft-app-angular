@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { AppBarComponent } from "./app-bar.component";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe("AppBarComponent", () => {
   let component: AppBarComponent;
@@ -8,9 +9,10 @@ describe("AppBarComponent", () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppBarComponent ]
+      declarations: [ AppBarComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +21,17 @@ describe("AppBarComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
-    expect(component).toBeTruthy();
+  describe("getting profile image", () => {
+    it("should get the default profile image", () => {
+      component.profileImage = undefined;
+      expect(component.getProfileImage()).toBe("./../assets/images/profile-default.png");
+    });
+
+    it("should get profile image from localStorage", () => {
+      spyOn((component as any).profileService, "getProfileImage")
+        .and.returnValue("foo");
+      component.ngOnInit();
+      expect(component.getProfileImage()).toBe("foo");
+    });
   });
 });
