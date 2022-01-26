@@ -6,16 +6,12 @@ on:
 
 jobs:
   build:
-    name: All Steps (Build, Test & Deploy)
+    name: Build & Test
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
-            
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
         with:
