@@ -18,14 +18,8 @@ The MukoSoft app is a web-based Angular 13 app which is designed to support peop
 
 The project thrives on the community and supporters. We thank all who participate in it.
 
-
-<div style="background: teal; display: flex; justify-content: center">
-
-![alt text](https://www.muko-dresden.info/wp-content/uploads/2016/11/Logo_weiß_web.png)
-![alt text](https://my-doc.net/gfx/My-Doc-Logo-negativ-2018_optimiert.svg)
-
-</div>
-
+- **[Mukoviszidose Selbsthilfegruppe Dresden](https://www.muko-dresden.info)** - for making known in the community and feedback to the app
+- **[My-Doc](https://my-doc.net)** - for providing the API
 ## Development
 ### Development server
 
