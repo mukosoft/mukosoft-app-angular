@@ -1,16 +1,14 @@
 {
   "name": "mukosoft-app-angular",
-  "homepage": "https://mukosoft.github.io/mukosoft-app-angular/",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href 'https://github.com/mukosoft/mukosoft-app-angular'",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --karma-config=karma.ci.conf.js",
     "test:local": "ng test --code-coverage",
-    "lint": "ng lint",
-    "deploy": "ng deploy --base-href=/mukosoft-app-angular/"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
