@@ -1,4 +1,5 @@
 # MukosoftAppAngular
+[![Build & Test](https://github.com/mukosoft/mukosoft-app-angular/actions/workflows/build_and_test.yml/badge.svg?branch=main)](https://github.com/mukosoft/mukosoft-app-angular/actions/workflows/build_and_test.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a4c38499-1244-4f6a-af05-e0b1c61f92d9/deploy-status)](https://app.netlify.com/sites/mukosoft-app/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
