@@ -7,7 +7,7 @@
 [![Build & Test](https://github.com/mukosoft/mukosoft-app-angular/actions/workflows/build_and_test.yml/badge.svg?branch=main)](https://github.com/mukosoft/mukosoft-app-angular/actions/workflows/build_and_test.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a4c38499-1244-4f6a-af05-e0b1c61f92d9/deploy-status)](https://app.netlify.com/sites/mukosoft-app/deploys)
 
-The MukoSoft app is a web-based Angular 13 app which is designed to support people with the metabolic disease "cystic fibrosis". The app is designed to:
+The MukoSoft app is a web-based Angular 13 app which is designed to support people - primarily in Germany - with the metabolic disease "cystic fibrosis". The app is designed to:
 - enable patients to communicate with doctors and support groups via an interface.
 - display news from the practice or from the support group
 - remind patients to take their medication
