@@ -14,13 +14,18 @@ The MukoSoft app is a web-based Angular 13 app which is designed to support peop
 - be able to manage the medication supply
 - contain a cookbook with recipes specifically tailored to the disease
 
-## Support
+## ⭐ Support
 
 The project thrives on the community and supporters. We thank all who participate in it.
 
 - **[Mukoviszidose Selbsthilfegruppe Dresden](https://www.muko-dresden.info)** - for making known in the community and feedback to the app
 - **[My-Doc](https://my-doc.net)** - for providing the API
-## Development
+
+## 🔒 Security
+
+wip
+
+## 🖥️ Development
 ### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
