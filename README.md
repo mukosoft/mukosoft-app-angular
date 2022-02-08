@@ -1,6 +1,6 @@
 <div style="background: white">
 
-![alt text](https://mukosoft.de/static/media/logo.46ae642b.png)
+![MukoSoft Logo](https://mukosoft.de/assets/img/mukosoft-logo.png)
 </div>
 
 # Mukosoft-App: Angular
