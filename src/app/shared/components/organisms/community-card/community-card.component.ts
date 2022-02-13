@@ -1,10 +1,10 @@
-import {Component, Input} from "@angular/core";
-import {Doctor} from "../../models/my-doc/Doctor";
-import {CommunityService} from "../../services/community-service/community.service";
+import { Component, Input } from "@angular/core";
+import { Doctor } from "../../../../models/my-doc/Doctor";
+import { CommunityService } from "../../../../pages/community/community.service";
 
 @Component({
   selector: "muko-community-card",
-  templateUrl: "./community-card.component.html"
+  templateUrl: "./community-card.component.html",
 })
 export class CommunityCardComponent {
   @Input() community: Doctor = {
@@ -17,11 +17,10 @@ export class CommunityCardComponent {
     is_visible: false,
     lastname: "",
     salutation: "",
-    uuid: ""
+    uuid: "",
   };
 
-  constructor(private readonly communityService: CommunityService) {
-  }
+  constructor(private readonly communityService: CommunityService) {}
 
   addGroupToFavorite(groupId: string): void {
     this.communityService.addFavoriteGroup(groupId);

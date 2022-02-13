@@ -1,12 +1,12 @@
-import {Component, Input} from "@angular/core";
-import {File} from "../../models/my-doc/File";
+import { Component, Input } from "@angular/core";
+import { File } from "../../../../models/my-doc/File";
 
 @Component({
   selector: "muko-file",
-  template: "<button class='btn btn-primary' (click)='downloadFile()'>{{file.filename}}</button>"
+  template:
+    "<button class='btn btn-primary' (click)='downloadFile()'>{{file.filename}}</button>",
 })
 export class FileComponent {
-
   @Input()
   file: File = {};
 
