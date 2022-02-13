@@ -1,19 +1,19 @@
-import {ComponentFixture, TestBed} from "@angular/core/testing";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import {IntroComponent} from "./intro.component";
-import {Intro} from "../../models/intro";
+import { IntroComponent } from "./intro.component";
+import { Intro } from "../../../../models/intro";
 
 const introItems: Intro[] = [
   {
     heading: "foo",
     text: "foo text",
-    image: undefined
+    image: undefined,
   },
   {
     heading: "bar",
     text: "bar text",
-    image: undefined
-  }
+    image: undefined,
+  },
 ];
 
 describe("IntroComponent", () => {
@@ -22,9 +22,8 @@ describe("IntroComponent", () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [IntroComponent]
-    })
-      .compileComponents();
+      declarations: [IntroComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

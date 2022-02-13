@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import {ProfileService} from "../../services/profile-service/profile.service";
+import { ProfileService } from "./profile.service";
 
 @Component({
   selector: "muko-profile",
-  templateUrl: "./profile.component.html"
+  templateUrl: "./profile.component.html",
 })
 export class ProfileComponent implements OnInit {
   name: string = "";
@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   nameEditMode = false;
   aboutMeEditMode = false;
 
-  constructor(public readonly profileService: ProfileService) { }
+  constructor(public readonly profileService: ProfileService) {}
 
   ngOnInit(): void {
     this.name = this.profileService.getName();
@@ -46,6 +46,9 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfileImage(): string {
-    return this.profileService.getProfileImage() || ProfileService.getDefaultProfileImage();
+    return (
+      this.profileService.getProfileImage() ||
+      ProfileService.getDefaultProfileImage()
+    );
   }
 }

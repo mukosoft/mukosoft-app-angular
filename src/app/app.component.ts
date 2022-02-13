@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {AppService} from "./services/app-service/app.service";
+import { Component, OnInit } from "@angular/core";
+import { AppService } from "./app.service";
 
 @Component({
   selector: "muko-root",
@@ -9,10 +9,7 @@ export class AppComponent implements OnInit {
   isFirstStart = true;
   introVisible = false;
 
-  constructor(
-      private readonly appService: AppService
-  ) {
-  }
+  constructor(private readonly appService: AppService) {}
 
   ngOnInit() {
     this.isFirstStart = this.appService.isFirstStart();
