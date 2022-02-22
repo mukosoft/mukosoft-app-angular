@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Intro } from "../../models/intro";
 import { AppStateService } from "@core";
 import { ProfileService } from "../profile/services/profile-service/profile.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-intro",
@@ -35,7 +36,8 @@ export class IntroComponent {
 
   constructor(
     private readonly appService: AppStateService,
-    private readonly profileService: ProfileService
+    private readonly profileService: ProfileService,
+    private readonly router: Router
   ) {}
 
   getCurrentHeading() {
@@ -69,6 +71,6 @@ export class IntroComponent {
   finishIntro() {
     this.appService.setFirstStart("false");
     this.profileService.initializeProfile();
-    window.location.reload();
+    this.router.navigate(["home"]);
   }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppRoute } from "./models/app-route";
+import { NotFirstTimeGuard } from "./core/guards/NotFirstTimeGuard";
 
 export const appRoutes: AppRoute[] = [
   // visible in navigation bar
@@ -9,6 +10,7 @@ export const appRoutes: AppRoute[] = [
       path: "home",
       loadChildren: () =>
         import("./features/home/home.module").then((m) => m.HomeModule),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "fi fi-rr-home",
     visibleOnMenu: true,
@@ -20,6 +22,7 @@ export const appRoutes: AppRoute[] = [
         import("./features/cookbook/cookbook.module").then(
           (m) => m.CookbookModule
         ),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "fi fi-rr-carrot",
     visibleOnMenu: true,
@@ -31,6 +34,7 @@ export const appRoutes: AppRoute[] = [
         import("./features/medicine/medicine.module").then(
           (m) => m.MedicineModule
         ),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "fi fi-rr-medicine",
     visibleOnMenu: true,
@@ -42,6 +46,7 @@ export const appRoutes: AppRoute[] = [
         import("./features/community/community.module").then(
           (m) => m.CommunityModule
         ),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "fi fi-rr-following",
     visibleOnMenu: true,
@@ -63,6 +68,7 @@ export const appRoutes: AppRoute[] = [
         import("./features/community/community.module").then(
           (m) => m.CommunityModule
         ),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "",
     visibleOnMenu: false,
@@ -74,6 +80,7 @@ export const appRoutes: AppRoute[] = [
         import("./features/profile/profile.module").then(
           (m) => m.ProfileModule
         ),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "",
     visibleOnMenu: false,
@@ -85,6 +92,7 @@ export const appRoutes: AppRoute[] = [
         import("./features/settings/settings.module").then(
           (m) => m.SettingsModule
         ),
+      canActivate: [NotFirstTimeGuard],
     },
     iconClass: "",
     visibleOnMenu: false,
