@@ -3,7 +3,7 @@
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36"/>
   </properties>
-  <testcase name="AppService should be created" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppService"/>
+  <testcase name="AppStateService should be created" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AppStateService"/>
   <testcase name="KawaiiLoadingBarComponent should create" time="0.019" classname="Chrome_Headless_97_0_4692_99_(Windows_10).KawaiiLoadingBarComponent"/>
   <testcase name="AvatarComponent should create" time="0.006" classname="Chrome_Headless_97_0_4692_99_(Windows_10).AvatarComponent"/>
   <testcase name="CommunityDetailComponent should create" time="0.013" classname="Chrome_Headless_97_0_4692_99_(Windows_10).CommunityDetailComponent"/>

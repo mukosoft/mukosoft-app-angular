@@ -1,13 +1,35 @@
 import { NgModule } from "@angular/core";
 
-import * as fromComponents from "./index";
-import { AppRoutingModule } from "../app.routing";
-import { BrowserModule } from "@angular/platform-browser";
+import {
+  AvatarComponent,
+  FileComponent,
+  KawaiiLoadingBarComponent,
+} from "./index";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 import { AngularKawaiiModule } from "angular-kawaii";
 
+const components: any[] = [
+  AvatarComponent,
+  FileComponent,
+  KawaiiLoadingBarComponent,
+];
+
+const pipes: any[] = [];
+
+const declarations: any[] = [...components, ...pipes];
+
+const modules: any[] = [
+  // angular
+  CommonModule,
+  RouterModule,
+  // component
+  // AngularKawaiiModule,
+];
+
 @NgModule({
-  declarations: [...fromComponents.components],
-  exports: [...fromComponents.components],
-  imports: [AppRoutingModule, BrowserModule, AngularKawaiiModule],
+  declarations: [...declarations],
+  imports: [...modules, AngularKawaiiModule],
+  exports: [...modules, ...declarations],
 })
 export class SharedModule {}

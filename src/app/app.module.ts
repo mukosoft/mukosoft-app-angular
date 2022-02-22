@@ -1,14 +1,14 @@
-import { CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID, NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
 import localeDe from "@angular/common/locales/de";
 import localeDeExtra from "@angular/common/locales/extra/de";
 import { AppComponent } from "./app.component";
-import { AngularKawaiiModule } from "angular-kawaii";
-import { RouterModule } from "@angular/router";
-import { registerLocaleData } from "@angular/common";
-import { SharedModule } from "./shared/shared.module";
-import { PagesModule } from "./pages/pages.module";
+import { CommonModule, registerLocaleData } from "@angular/common";
+import { AppRoutingModule } from "./app-routing.module";
+import { BrowserModule } from "@angular/platform-browser";
+import { TopBarModule } from "./features/top-bar/top-bar.module";
+import { MenuBarModule } from "./features/menu-bar/menu-bar.module";
+import { HttpClientModule } from "@angular/common/http";
+import { IntroModule } from "./features/intro/intro.module";
 
 // setting locale for angular pipe localization
 registerLocaleData(localeDe, localeDeExtra);
@@ -16,15 +16,18 @@ registerLocaleData(localeDe, localeDeExtra);
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    RouterModule,
     BrowserModule,
+    AppRoutingModule,
+    TopBarModule,
+    MenuBarModule,
     HttpClientModule,
-    AngularKawaiiModule,
-    SharedModule,
-    PagesModule,
+    IntroModule,
+    // CommonModule,
+    // MenuBarModule,
+    // RouterModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [{ provide: LOCALE_ID, useValue: "de" }],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  // providers: [{ provide: LOCALE_ID, useValue: "de" }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

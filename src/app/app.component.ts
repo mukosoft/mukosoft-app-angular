@@ -1,22 +1,26 @@
 import { Component, OnInit } from "@angular/core";
-import { AppService } from "./app.service";
+import { AppStateService } from "@core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: "muko-root",
+  selector: "app-root",
   templateUrl: "./app.component.html",
 })
 export class AppComponent implements OnInit {
   isFirstStart = true;
-  introVisible = false;
 
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppStateService,
+    private readonly routerService: Router
+  ) {}
 
   ngOnInit() {
     this.isFirstStart = this.appService.isFirstStart();
+
     if (this.isFirstStart) {
-      this.introVisible = true;
+      this.routerService.navigate(["intro"]);
     } else {
-      this.introVisible = false;
+      this.routerService.navigate(["home"]);
     }
   }
 }

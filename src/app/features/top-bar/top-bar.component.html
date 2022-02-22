@@ -1,0 +1,15 @@
+<div class="app-bar">
+    <div class="app-bar__leading">
+        <div class="app-bar__image">
+            <a routerLink="/profile">
+                <app-avatar [img]="this.getProfileImage()"></app-avatar>
+            </a>
+        </div>
+        <h2 *ngIf="title">{{title}}</h2>
+    </div>
+    <div *ngIf="rightIconClass" class="app-bar__icon">
+        <a [routerLink]="rightIconLink">
+            <span class="{{rightIconClass}}"></span>
+        </a>
+    </div>
+</div>

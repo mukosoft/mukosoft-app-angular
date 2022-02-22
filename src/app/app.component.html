@@ -1,13 +1,11 @@
-<div class="app-container" *ngIf="!introVisible">
-    <muko-app-bar title="MukoSoft"
-                  leftIconLink="/profil"
-                  rightIconClass="fi fi-rr-settings-sliders"
-                  rightIconLink="/einstellungen">
-
-    </muko-app-bar>
+<div class="app-container">
+    <app-top-bar title="MukoSoft"
+                 leftIconLink="/profil"
+                 rightIconClass="fi fi-rr-settings-sliders"
+                 rightIconLink="/einstellungen">
+    </app-top-bar>
     <div class="app-container__content">
         <router-outlet></router-outlet>
     </div>
-    <muko-menu-bar></muko-menu-bar>
+    <app-menu-bar></app-menu-bar>
 </div>
-<muko-intro *ngIf="introVisible"></muko-intro>

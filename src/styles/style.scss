@@ -6,13 +6,13 @@
 
 // components
 @import "./src/app/app.component";
-@import "src/app/shared/components/organisms/menu-bar/menu-bar.component";
-@import "src/app/shared/components/organisms/app-bar/app-bar.component";
-@import "src/app/shared/components/organisms/intro/intro.component";
-@import "src/app/shared/components/organisms/community-toolbar/community-toolbar.component";
-@import "src/app/shared/components/molecules/kawaii-loading-bar/kawaii-loading-bar.component";
+@import "src/app/features/menu-bar/menu-bar.component";
+@import "src/app/features/top-bar/top-bar.component";
+@import "src/app/features/intro/intro.component";
+@import "src/app/features/community/components/community-toolbar/community-toolbar.component";
+@import "src/app/shared/components/kawaii-loading-bar/kawaii-loading-bar.component";
 
 // pages
-@import "./src/app/pages/home/home.component";
-@import "./src/app/pages/profile/profile.component";
-@import "src/app/pages/community/community.component";
+@import "src/app/features/home/components/home.component";
+@import "src/app/features/profile/profile.component";
+@import "src/app/features/community/components/community.component";

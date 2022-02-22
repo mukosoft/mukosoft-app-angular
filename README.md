@@ -51,3 +51,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ### Running end-to-end tests
 
 The app uses cypress. This is a work-in-progress.
+
+## References
+1. Thanks to Christian for his great example of the folder structure: https://github.com/cwansart/ng-folder-structure-test
+

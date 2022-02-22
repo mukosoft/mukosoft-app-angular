@@ -1,0 +1,13 @@
+<div class="container max-container">
+    <div class="row">
+        <div class="col-12 py-4">
+            <h2>Unsere Community</h2>
+            <app-community-toolbar (textInputEmitter)="searchCommunity($event)"></app-community-toolbar>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" *ngFor="let group of filteredGroups">
+            <app-community-card [community]="group"></app-community-card>
+        </div>
+    </div>
+</div>

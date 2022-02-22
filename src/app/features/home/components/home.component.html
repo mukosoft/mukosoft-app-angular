@@ -1,0 +1,25 @@
+<div class="container max-container">
+    <div class="row">
+        <div class="col-12">
+            <div class="home-greeting__container">
+                <h2 class="home-greeting__hello">Hallo,</h2>
+                <h2 class="home-greeting__name">{{name}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container" *ngIf="userHasNews()">
+        <div class="row">
+            <div class="col-12" *ngFor="let communityNews of news">
+                <app-news-card [news]="communityNews"></app-news-card>
+            </div>
+        </div>
+    </div>
+    <app-kawaii-loading-bar *ngIf="isLoading && userHasNews()"></app-kawaii-loading-bar>
+    <div *ngIf="!userHasNews()" class="status__no-news">
+        <SpeechBubble [size]="80" [mood]="'sad'" [color]="'orange'"></SpeechBubble>
+        <h3>Du hast bisher keine Neuigkeiten.</h3>
+        <a routerLink="/community" class="follow-link">
+            <button class="btn btn-primary">Folge jetzt anderen Communites!</button>
+        </a>
+    </div>
+</div>
