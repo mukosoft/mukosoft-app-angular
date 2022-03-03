@@ -1,0 +1,13 @@
+@use "sass:map";
+
+/// import new fonts or overwrite global font here and register it inside $font-family-extra map.
+
+$font-family-basic: (
+  "global": "Arial",
+);
+
+$font-family-extra: (
+  "logo": "Consolas",
+);
+
+$font-family: map.merge($font-family-basic, $font-family-extra);

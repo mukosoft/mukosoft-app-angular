@@ -1,0 +1,19 @@
+@import "functions";
+@import "palette";
+@import "spacing";
+@import "typography";
+@import "fonts";
+@import "shadow";
+@import "utility";
+@import "border-radius";
+@import "normalize";
+
+* {
+  font-size: #{$base-font-size};
+  font-family: get-font-family("global"), serif;
+  line-height: get-line-height("md");
+}
+
+body {
+  background: get-surface-color("body");
+}

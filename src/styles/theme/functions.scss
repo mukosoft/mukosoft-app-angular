@@ -1,0 +1,71 @@
+@use "sass:map";
+
+/// Get the primary color based on specific shade
+/// @param {String} $shade - the shade for the color, ranges from "100" to "900"
+/// @type String
+@function get-primary-color($shade: "500") {
+  @return map.get($primary-color, $shade);
+}
+
+/// Get the secondary color based on specific shade
+/// @param {String} $shade - the shade for the color, ranges from "100" to "900"
+/// @type String
+@function get-secondary-color($shade: "500") {
+  @return map.get($secondary-color, $shade);
+}
+
+/// Get the surface color based on specific key
+/// @param {String} $surface - can be "body"
+/// @type Color
+@function get-surface-color($surface) {
+  @return map.get($surface-color, $surface);
+}
+
+/// Get the severity color based on specific key
+/// @param {String} $sev - can be "info", "warning", "danger", "success"
+/// @type Color
+@function get-severity-color($sev: "info") {
+  @return map.get($severity, $sev);
+}
+
+/// Get the font size based on the given size
+/// @param {String} $size - can be "xs", "sm", "md", "lg" or "xl"
+/// @type Number
+@function get-font-size($size: "md") {
+  @return map.get($font-size, $size);
+}
+
+/// Get the font family based on a given key
+/// @param {String} $family - can be "global" or "logo"
+/// @type FontFamily
+@function get-font-family($family: "global") {
+  @return map.get($font-family, $family);
+}
+
+/// Get the line height based on a given key
+/// @param {String} $family - can be "sm", "md" or "lg"
+/// @type Number
+@function get-line-height($height: "md") {
+  @return map.get($line-height, $height);
+}
+
+/// Get the spacing based on a given key
+/// @param {String} $family - can be "0.5x", "1x", "2x", "3x", "4x", "6x", "8x", "12x", "16x"
+/// @type Number
+@function get-spacing($space: "1x") {
+  @return map.get($spacing, $space);
+}
+
+/// Get the shadow based on a given key
+/// @param {String} $shadow
+/// @type BoxShadow
+@function get-shadow($box-shadow: "md") {
+  @return map.get($shadow, $box-shadow);
+}
+
+/// Get the border radius on a given key
+/// @param {String} $family - can be "sm", "md", "lg"
+/// @type Number
+@function get-border-radius($radius: "md") {
+  @return map.get($border-radius, $radius);
+}

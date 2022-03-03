@@ -1,0 +1,9 @@
+@use "sass:map";
+
+$border-radius-base: 6px;
+
+$border-radius: (
+  "sm": calc(#{$border-radius-base} * 0.5),
+  "md": calc(#{$border-radius-base} * 1),
+  "lg": calc(#{$border-radius-base} * 2),
+);
