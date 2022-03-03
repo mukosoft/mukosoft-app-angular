@@ -7,15 +7,15 @@
             </div>
         </div>
     </div>
-    <div class="container" *ngIf="userHasNews()">
-        <div class="row">
+    <div class="container result-container" *ngIf="hasNews">
+        <div class="row news-card-container">
             <div class="col-12" *ngFor="let communityNews of news">
-                <app-news-card [news]="communityNews"></app-news-card>
+                <app-news-card [news]="communityNews" ></app-news-card>
             </div>
         </div>
     </div>
-    <app-kawaii-loading-bar *ngIf="isLoading && userHasNews()"></app-kawaii-loading-bar>
-    <div *ngIf="!userHasNews()" class="status__no-news">
+    <app-kawaii-loading-bar *ngIf="isLoading && hasNews"></app-kawaii-loading-bar>
+    <div *ngIf="!hasNews" class="status__no-news">
         <SpeechBubble [size]="80" [mood]="'sad'" [color]="'orange'"></SpeechBubble>
         <h3>Du hast bisher keine Neuigkeiten.</h3>
         <a routerLink="/community" class="follow-link">

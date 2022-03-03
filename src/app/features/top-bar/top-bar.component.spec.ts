@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { TopBarComponent } from "./top-bar.component";
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
-describe("AppBarComponent", () => {
+describe("TopBarComponent", () => {
   let component: TopBarComponent;
   let fixture: ComponentFixture<TopBarComponent>;
 

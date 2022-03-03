@@ -18,22 +18,4 @@ describe("AppComponent", () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
-  xdescribe("initialization of the app", () => {
-    it("should show a intro", () => {
-      localStorage.clear();
-      localStorage.setItem("FIRST_START", "true");
-      component.ngOnInit();
-      fixture.detectChanges();
-      // expect(component.introVisible).toBeTrue();
-    });
-
-    it("should not show a intro", () => {
-      localStorage.clear();
-      localStorage.setItem("FIRST_START", "false");
-      component.ngOnInit();
-      fixture.detectChanges();
-      // expect(component.introVisible).toBeFalse();
-    });
-  });
 });

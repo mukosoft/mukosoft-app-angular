@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed, tick} from "@angular/core/testing";
+import { ComponentFixture, TestBed, tick } from "@angular/core/testing";
 
 import { ProfileComponent } from "./profile.component";
-import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
 describe("ProfileComponent", () => {
   let component: ProfileComponent;
@@ -9,10 +9,9 @@ describe("ProfileComponent", () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents();
+      declarations: [ProfileComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
   });
 
   beforeEach(() => {

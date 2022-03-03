@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnChanges, OnInit } from "@angular/core";
 import { ProfileService } from "../../profile/services/profile-service/profile.service";
 import { MyDocResponse } from "../../../models/my-doc/MyDocResponse";
 import { HttpClient } from "@angular/common/http";
@@ -11,8 +11,12 @@ import { News } from "../../../models/my-doc/News";
 })
 export class HomeComponent implements OnInit {
   name: string = "";
+
   news: News[] = [];
+
   isLoading = true;
+
+  hasNews = false;
 
   constructor(
     public readonly profileService: ProfileService,
@@ -22,9 +26,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.name = this.profileService.getName();
+    this.loadNews();
+  }
+
+  private loadNews() {
     this.communityService
       .getCommunityNews()
       .subscribe((myDocResponses: MyDocResponse[]) => {
+        // todo: implement mapping service
         myDocResponses.forEach((response) => {
           if (response.success) {
             response.data.DoctorNewsItems.forEach((news: any) => {
@@ -45,10 +54,7 @@ export class HomeComponent implements OnInit {
           }
         });
         this.isLoading = false;
+        this.hasNews = this.news.length > 0;
       });
-  }
-
-  userHasNews() {
-    return this.communityService.getGroups().length > 0;
   }
 }

@@ -8,9 +8,8 @@ describe("CommunityToolbarComponent", () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommunityToolbarComponent ]
-    })
-    .compileComponents();
+      declarations: [CommunityToolbarComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
