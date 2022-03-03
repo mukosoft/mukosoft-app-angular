@@ -62,11 +62,19 @@ describe("HomeComponent", () => {
   });
 
   describe("the user should have rendered some basic elements", () => {
-    it("should have a welcome message", () => {
+    it("should have a welcome message containing his username", () => {
+      component.name = "John doe";
+      fixture.detectChanges();
+
       const welcomeMessageContainer = fixture.debugElement.query(
         By.css(".home-greeting__container")
       );
 
+      const nameElement = fixture.debugElement.query(
+        By.css(".home-greeting__name")
+      );
+
+      expect(nameElement.nativeElement.innerText).toBe("John doe");
       expect(welcomeMessageContainer).not.toBeNull();
     });
   });
