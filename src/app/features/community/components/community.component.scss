@@ -1,10 +1,12 @@
+@import "./src/styles/theme/functions";
+
 .self-help-card__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $card-background-color;
-  box-shadow: $box-shadow-default;
-  border-radius: $border-radius-default;
+  background: get-surface-color("card");
+  box-shadow: get-shadow();
+  border-radius: get-border-radius();
   padding: 1rem;
   margin: .35rem 0;
 
@@ -17,7 +19,7 @@
 
     .self-help-card__location {
       padding: .5rem 0 0 0;
-      color: $primary-color;
+      color: get-primary-color();
       font-weight: normal;
     }
 
@@ -38,10 +40,8 @@
       }
 
       .fi.favorite {
-        color: crimson;
+        color: crimson; // todo: get custom color
       }
     }
   }
-
-
 }

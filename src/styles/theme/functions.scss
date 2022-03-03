@@ -1,5 +1,14 @@
 @use "sass:map";
 
+@import "palette";
+@import "spacing";
+@import "typography";
+@import "fonts";
+@import "shadow";
+@import "utility";
+@import "border-radius";
+@import "normalize";
+
 /// Get the primary color based on specific shade
 /// @param {String} $shade - the shade for the color, ranges from "100" to "900"
 /// @type String

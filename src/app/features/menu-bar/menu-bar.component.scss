@@ -1,7 +1,11 @@
+@import "./src/styles/theme/functions";
 $animationTime: 300ms;
 
+$nav-bar-icon__selected-color: get-primary-color();
+$nav-bar-icon__unselected-color: get-secondary-color();
+
 .menu-bar__container {
-    background: $nav-bar-background-color;
+    background: get-surface-color("navigation");
     display: flex;
     position: fixed;
     bottom: .5rem;
@@ -10,8 +14,8 @@ $animationTime: 300ms;
     flex-direction: row;
     justify-content: space-around;
     padding: 1.5rem 0;
-    box-shadow: $box-shadow-navigation-bar;
-    border-radius: $border-radius-default;
+    box-shadow: get-shadow("lg");
+    border-radius: get-border-radius();
     z-index: 999;
 
     .menu-bar__items {
@@ -63,10 +67,10 @@ $animationTime: 300ms;
 
 @keyframes itemSelected {
     33.333% {
-        transform: rotateZ(8deg);
+        transform: rotate(8deg);
     }
 
     66.666% {
-        transform: rotateZ(-8deg);
+        transform: rotate(-8deg);
     }
 }

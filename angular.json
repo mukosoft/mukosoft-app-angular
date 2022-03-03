@@ -27,12 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles/style.scss",
-              "src/assets/icons/uicons-regular-rounded/css/uicons-regular-rounded.css",
-              "src/assets/icons/uicons-regular-solid/css/uicons-solid-rounded.css",
-              "src/styles/theme/theme.scss"
+              "src/styles/style.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

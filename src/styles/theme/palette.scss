@@ -5,36 +5,37 @@
 
 /// primary color palette
 $primary-color: (
-  "100": #fabacf,
-  "200": #f78daf,
-  "300": #f45e8f,
-  "400": #f13877,
-  "500": #ee025f,
-  "normal": #ee025f,
-  "600": #dd005c,
-  "700": #c70058,
-  "800": #b20054,
-  "900": #8e004e,
+  "100": #b4deda,
+  "200": #85c9c3,
+  "300": #57b4ab,
+  "400": #3aa398,
+  "500": #299387,
+  "normal": #299387,
+  "600": #26867a,
+  "700": #22766a,
+  "800": #1f665b,
+  "900": #194a40,
 );
 
 /// secondary color palette
 $secondary-color: (
-  "100": #b7f8d0,
-  "200": #7ff3b2,
-  "300": #02ee90,
-  "400": #00e773,
-  "500": #00df5d,
-  "normal": #00df5d,
-  "600": #00ce51,
-  "700": #00ba44,
-  "800": #00a738,
-  "900": #008622,
+  "100": #ffe0b2,
+  "200": #ffcd80,
+  "300": #ffb84d,
+  "400": #ffa826,
+  "500": #ff9800,
+  "normal": #ff9800,
+  "600": #fb8d00,
+  "700": #f57d00,
+  "800": #ef6d00,
+  "900": #e65200,
 );
 
 /// background color of surfaces
 $surface-color: (
   "body": #f6f7fb,
   "card": #ffffff,
+  "navigation": #ffffff,
 );
 
 $severity: (

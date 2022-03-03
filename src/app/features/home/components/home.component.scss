@@ -1,3 +1,5 @@
+@import "./src/styles/theme/functions";
+
 .home-greeting__container {
   padding: 4rem 0 3rem 0;
   .home-greeting__hello, .home-greeting__name {
@@ -25,6 +27,6 @@
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    color: $secondary-color;
+    color: get-secondary-color();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ProfileService } from "../../profile/services/profile-service/profile.service";
 import { MyDocResponse } from "../../../models/my-doc/MyDocResponse";
 import { HttpClient } from "@angular/common/http";
@@ -8,6 +8,7 @@ import { News } from "../../../models/my-doc/News";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
   name: string = "";

@@ -1,18 +1,6 @@
-@import "./variables";
-@import "./global";
+// use icons
+@use "./src/assets/icons/uicons-regular-rounded/css/uicons-regular-rounded.css";
+@use "./src/assets/icons/uicons-regular-solid/css/uicons-solid-rounded.css";
 
-// bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
-
-// components
-@import "./src/app/app.component";
-@import "src/app/features/menu-bar/menu-bar.component";
-@import "src/app/features/top-bar/top-bar.component";
-@import "src/app/features/intro/intro.component";
-@import "src/app/features/community/components/community-toolbar/community-toolbar.component";
-@import "src/app/shared/components/kawaii-loading-bar/kawaii-loading-bar.component";
-
-// pages
-@import "src/app/features/home/components/home.component";
-@import "src/app/features/profile/profile.component";
-@import "src/app/features/community/components/community.component";
+@import "./src/styles/bootstrap/theme";
+@import "./src/styles/theme/theme";

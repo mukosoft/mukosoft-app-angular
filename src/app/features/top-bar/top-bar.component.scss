@@ -1,3 +1,5 @@
+@import "./src/styles/theme/functions";
+
 .app-bar {
   display: flex;
   justify-content: space-between;
@@ -6,8 +8,8 @@
   position: -webkit-sticky;
   top: 5px;
   background: white;
-  box-shadow: $box-shadow-app-bar;
-  border-radius: $border-radius-default;
+  box-shadow: get-shadow("lg");
+  border-radius: get-border-radius();
   padding: .5rem 1rem;
   height: 80px;
 
@@ -23,8 +25,8 @@
 
     .app-bar__image {
       img {
-        border-radius: $border-radius-full;
-        box-shadow: $box-shadow-default;
+        border-radius: 100%;
+        box-shadow: get-shadow("lg");
         margin: .2rem;
         object-fit: cover;
         height: 4rem;

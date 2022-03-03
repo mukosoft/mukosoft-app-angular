@@ -1,10 +1,12 @@
+@import "./src/styles/theme/functions";
+
 .profile {
   .profile-input-text__name {
     font-size: 1.3rem;
     font-weight: bold;
     background: none;
     border: none;
-    border-bottom: 2px solid $text-color;
+    border-bottom: 2px solid #333; // todo: text color variable
     margin: 1.4rem 0;
     text-align: center;
   }
@@ -28,7 +30,7 @@
     height: 200px;
     width: 200px;
     object-fit: cover;
-    border-radius: $border-radius-full;
-    box-shadow: $box-shadow-default;
+    border-radius: get-border-radius();
+    box-shadow: get-shadow();
   }
 }

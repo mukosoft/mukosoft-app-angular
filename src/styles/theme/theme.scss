@@ -16,4 +16,56 @@
 
 body {
   background: get-surface-color("body");
+  padding-bottom: 120px;
+}
+
+input[type="text"] {
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: get-border-radius();
+  font-size: 1rem;
+  box-shadow: get-shadow();
+  cursor: pointer;
+
+  &.btn-primary {
+    border: 2px solid get-primary-color();
+    background: get-primary-color();
+
+    span {
+      color: white;
+    }
+  }
+
+  &.btn-secondary {
+    border: 2px solid get-secondary-color();
+  }
+}
+
+.img-card-icon {
+  width: 64px;
+  height: 64px;
+  padding: 0 1rem 0 0;
+  object-fit: contain;
+}
+
+.card-text {
+  padding: 0.5rem 0;
+}
+
+.max-container {
+  max-width: 800px !important;
+}
+
+a {
+  text-decoration: none;
+
+  .fi {
+    text-decoration: none;
+  }
 }

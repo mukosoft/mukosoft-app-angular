@@ -1,3 +1,5 @@
+@import "./src/styles/theme/functions";
+
 .self-help-toolbar__container {
   display: flex;
   position: sticky;
@@ -11,8 +13,8 @@
     justify-content: center;
     align-items: center;
     background: white;
-    box-shadow: $box-shadow-default;
-    border-radius: $border-radius-default;
+    box-shadow: get-shadow();
+    border-radius: get-border-radius();
     padding: .5rem;
     height: 40px;
     min-width: 40px;

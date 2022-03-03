@@ -1,13 +1,13 @@
-@import "src/styles/variables";
+@import "src/styles/theme/functions";
 
 .avatar {
   border-radius: 999px;
   object-fit: contain;
   padding: .2rem;
   box-shadow:
-          0 0 0 2px rgba($primary, .3),
-          0 0 0 4px rgba($primary, .2),
-          0 0 0 10px rgba($primary, .1);
+          0 0 0 2px rgba(get-primary-color(), .3),
+          0 0 0 4px rgba(get-primary-color(), .2),
+          0 0 0 10px rgba(get-primary-color(), .1);
   margin: 1rem;
 
   &.sm {
